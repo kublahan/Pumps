@@ -1,0 +1,70 @@
+.pump-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .pump-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .pump-card h3 {
+    margin-top: 0;
+    margin-bottom: 8px;
+    color: #333;
+  }
+  
+  .pump-card p {
+    margin-bottom: 4px;
+    color: #555;
+  }
+  
+  .pump-card button,
+  .pump-card a {
+    margin-top: 8px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .pump-card button {
+    background-color: #dc3545;
+    color: white;
+    margin-right: 8px;
+  }
+  
+  .pump-card button:hover {
+    background-color: #c82333;
+  }
+  
+  .pump-card a {
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .pump-card a:hover {
+    background-color: #0056b3;
+  }
+  
+  @media (max-width: 768px) {
+    .pump-card {
+      padding: 12px;
+      margin-bottom: 12px;
+    }
+  
+    .pump-card button,
+    .pump-card a {
+      padding: 6px 12px;
+      font-size: 12px;
+    }
+  }
+  

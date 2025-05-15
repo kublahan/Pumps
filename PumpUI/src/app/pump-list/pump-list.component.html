@@ -1,0 +1,24 @@
+<h2>Список Насосов</h2>
+<button routerLink="/pumps/new">Добавить новый насос</button> <table>
+  <thead>
+    <tr>
+      <th>Наименование</th>
+      <th>Макс. давление</th>
+      <th>Цена</th>
+      <th>Действия</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let pump of pumps">
+      <td>{{ pump.pumpName }}</td>
+      <td>{{ pump.maxPressure }} бар</td>
+      <td>{{ pump.priceInRubles }} руб.</td>
+      <td>
+        <a [routerLink]="['/pumps', pump.id]">Детали</a>
+        <a [routerLink]="['/pumps/edit', pump.id]">Редактировать</a>
+        <button (click)="deletePump(pump.id)">Удалить</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<div *ngIf="!pumps.length">Нет данных о насосах.</div>
