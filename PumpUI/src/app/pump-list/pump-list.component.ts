@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Pump, PumpService } from '../services/pump.service'; // Путь к сервису
+import { Pump, PumpService } from '../services/pump.service';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
@@ -10,7 +10,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [
     RouterModule,
-    CommonModule // <--- Добавьте RouterModule.forRoot(routes)
+    CommonModule
   ],
 })
 export class PumpListComponent implements OnInit {
@@ -31,7 +31,7 @@ export class PumpListComponent implements OnInit {
   deletePump(id: number): void {
     if(confirm("Вы уверены, что хотите удалить этот насос?")) {
         this.pumpService.deletePump(id).subscribe(() => {
-        this.pumps = this.pumps.filter(p => p.id !== id); // Обновить список локально
+        this.pumps = this.pumps.filter(p => p.id !== id);
       });
     }
   }

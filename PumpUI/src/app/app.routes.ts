@@ -5,8 +5,8 @@ import { PumpDetailComponent } from './pump-detail/pump-detail.component';
 
 export const routes: Routes = [
     { path: 'pumps', component: PumpListComponent },
-    { path: 'pumps/new', component: PumpFormComponent }, // Убедитесь, что PumpFormComponent standalone
+    { path: 'pumps/new', component: PumpFormComponent },
     { path: 'pumps/edit/:id', component: PumpFormComponent },
-    { path: 'pumps/:id', component: PumpDetailComponent }, // Убедитесь, что PumpDetailComponent standalone
+    { path: 'pumps/:id', component: PumpDetailComponent },
     { path: '', redirectTo: '/pumps', pathMatch: 'full' },
 ];
