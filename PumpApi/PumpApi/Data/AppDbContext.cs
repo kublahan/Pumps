@@ -15,25 +15,25 @@ namespace PumpApi.Data
         {
             base.OnModelCreating(modelBuilder);
 
-            // Настройка связей для Pump с Material (для корпуса и колеса)
+
             modelBuilder.Entity<Pump>()
-                .HasOne(p => p.HousingMaterialDetails) // Используем навигационное свойство
+                .HasOne(p => p.HousingMaterialDetails)
                 .WithMany()
-                .HasForeignKey(p => p.HousingMaterialForeignKey) // Используем свойство внешнего ключа
+                .HasForeignKey(p => p.HousingMaterialForeignKey)
                 .OnDelete(DeleteBehavior.Restrict);
 
             modelBuilder.Entity<Pump>()
-                .HasOne(p => p.WheelMaterialDetails) // Используем навигационное свойство
+                .HasOne(p => p.WheelMaterialDetails)
                 .WithMany()
-                .HasForeignKey(p => p.WheelMaterialForeignKey) // Используем свойство внешнего ключа
+                .HasForeignKey(p => p.WheelMaterialForeignKey)
                 .OnDelete(DeleteBehavior.Restrict);
 
-            // Настройка связи для Pump с Motor
+
             modelBuilder.Entity<Pump>()
-                .HasOne(p => p.MotorDetails) // Используем навигационное свойство
+                .HasOne(p => p.MotorDetails)
                 .WithMany()
-                .HasForeignKey(p => p.MotorForeignKey) // Используем свойство внешнего ключа
-                .HasConstraintName("motor_id") // Название ограничения внешнего ключа в базе данных
+                .HasForeignKey(p => p.MotorForeignKey)
+                .HasConstraintName("motor_id")
                 .OnDelete(DeleteBehavior.Restrict);
         }
     }

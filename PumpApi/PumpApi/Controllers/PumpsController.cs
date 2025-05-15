@@ -1,8 +1,8 @@
-﻿// Controllers/PumpsController.cs
+﻿
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using PumpApi.Models;
-using PumpApi.Data; // Ваш DbContext
+using PumpApi.Data;
 
 [Route("api/[controller]")]
 [ApiController]
@@ -15,26 +15,26 @@ public class PumpsController : ControllerBase
         _context = context;
     }
 
-    // GET: api/Pumps
+
     [HttpGet]
     public async Task<ActionResult<IEnumerable<Pump>>> GetPumps()
     {
         return await _context.Pumps
-            .Include(p => p.MotorDetails) // Используем MotorDetails
-            .Include(p => p.HousingMaterialDetails) // Используем HousingMaterialDetails
-            .Include(p => p.WheelMaterialDetails) // Используем WheelMaterialDetails
+            .Include(p => p.MotorDetails)
+            .Include(p => p.HousingMaterialDetails)
+            .Include(p => p.WheelMaterialDetails)
             .ToListAsync();
     }
 
-    // GET: api/Pumps/5
+
     [HttpGet("{id}")]
     public async Task<ActionResult<Pump>> GetPump(int id)
     {
         var pump = await _context.Pumps
-            .Include(p => p.MotorDetails) // Используем MotorDetails
-            .Include(p => p.HousingMaterialDetails) // Используем HousingMaterialDetails
-            .Include(p => p.WheelMaterialDetails) // Используем WheelMaterialDetails
-            .FirstOrDefaultAsync(p => p.PumpId == id); // Используем PumpId
+            .Include(p => p.MotorDetails)
+            .Include(p => p.HousingMaterialDetails)
+            .Include(p => p.WheelMaterialDetails)
+            .FirstOrDefaultAsync(p => p.PumpId == id);
 
         if (pump == null)
         {
@@ -43,20 +43,20 @@ public class PumpsController : ControllerBase
         return pump;
     }
 
-    // POST: api/Pumps
+
     [HttpPost]
     public async Task<ActionResult<Pump>> PostPump(Pump pump)
     {
         _context.Pumps.Add(pump);
         await _context.SaveChangesAsync();
-        return CreatedAtAction(nameof(GetPump), new { id = pump.PumpId }, pump); // Используем PumpId
+        return CreatedAtAction(nameof(GetPump), new { id = pump.PumpId }, pump);
     }
 
-    // PUT: api/Pumps/5
+
     [HttpPut("{id}")]
     public async Task<IActionResult> PutPump(int id, Pump pump)
     {
-        if (id != pump.PumpId) // Используем PumpId
+        if (id != pump.PumpId)
         {
             return BadRequest();
         }
@@ -67,7 +67,7 @@ public class PumpsController : ControllerBase
         }
         catch (DbUpdateConcurrencyException)
         {
-            if (!_context.Pumps.Any(e => e.PumpId == id)) // Используем PumpId
+            if (!_context.Pumps.Any(e => e.PumpId == id))
             {
                 return NotFound();
             }
@@ -79,7 +79,7 @@ public class PumpsController : ControllerBase
         return NoContent();
     }
 
-    // DELETE: api/Pumps/5
+
     [HttpDelete("{id}")]
     public async Task<IActionResult> DeletePump(int id)
     {

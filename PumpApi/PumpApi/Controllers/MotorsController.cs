@@ -14,14 +14,14 @@ public class MotorsController : ControllerBase
         _context = context;
     }
 
-    // GET: api/motors
+
     [HttpGet]
     public async Task<ActionResult<IEnumerable<Motor>>> GetMotors()
     {
         return await _context.Motors.ToListAsync();
     }
 
-    // GET: api/motors/5
+
     [HttpGet("{id}")]
     public async Task<ActionResult<Motor>> GetMotor(int id)
     {
@@ -30,7 +30,7 @@ public class MotorsController : ControllerBase
         return motor;
     }
 
-    // POST: api/motors
+
     [HttpPost]
     public async Task<ActionResult<Motor>> CreateMotor(Motor motor)
     {
@@ -39,7 +39,7 @@ public class MotorsController : ControllerBase
         return CreatedAtAction(nameof(GetMotor), new { id = motor.Id }, motor);
     }
 
-    // PUT: api/motors/5
+
     [HttpPut("{id}")]
     public async Task<IActionResult> UpdateMotor(int id, Motor motor)
     {
@@ -57,7 +57,7 @@ public class MotorsController : ControllerBase
         return NoContent();
     }
 
-    // DELETE: api/motors/5
+
     [HttpDelete("{id}")]
     public async Task<IActionResult> DeleteMotor(int id)
     {

@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace PumpApi.Models
 {
-    // Models/Pump.cs
+
     public class Pump
     {
         [Key]

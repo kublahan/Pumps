@@ -14,14 +14,14 @@ public class MaterialsController : ControllerBase
         _context = context;
     }
 
-    // GET: api/materials
+
     [HttpGet]
     public async Task<ActionResult<IEnumerable<Material>>> GetMaterials()
     {
         return await _context.Materials.ToListAsync();
     }
 
-    // GET: api/materials/5
+
     [HttpGet("{id}")]
     public async Task<ActionResult<Material>> GetMaterial(int id)
     {
@@ -30,20 +30,20 @@ public class MaterialsController : ControllerBase
         return material;
     }
 
-    // POST: api/materials
+
     [HttpPost]
     public async Task<ActionResult<Material>> CreateMaterial(Material material)
     {
         _context.Materials.Add(material);
         await _context.SaveChangesAsync();
-        return CreatedAtAction(nameof(GetMaterial), new { id = material.id }, material); // Используем material.id
+        return CreatedAtAction(nameof(GetMaterial), new { id = material.id }, material);
     }
 
-    // PUT: api/materials/5
+
     [HttpPut("{id}")]
     public async Task<IActionResult> UpdateMaterial(int id, Material material)
     {
-        if (id != material.id) return BadRequest(); // Используем material.id
+        if (id != material.id) return BadRequest();
         _context.Entry(material).State = EntityState.Modified;
         try
         {
@@ -57,7 +57,7 @@ public class MaterialsController : ControllerBase
         return NoContent();
     }
 
-    // DELETE: api/materials/5
+
     [HttpDelete("{id}")]
     public async Task<IActionResult> DeleteMaterial(int id)
     {
@@ -70,6 +70,6 @@ public class MaterialsController : ControllerBase
 
     private bool MaterialExists(int id)
     {
-        return _context.Materials.Any(e => e.id == id); // Используем e.id
+        return _context.Materials.Any(e => e.id == id);
     }
 }
