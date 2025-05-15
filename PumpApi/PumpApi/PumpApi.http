@@ -1,0 +1,6 @@
+@PumpApi_HostAddress = http://localhost:5282
+
+GET {{PumpApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
