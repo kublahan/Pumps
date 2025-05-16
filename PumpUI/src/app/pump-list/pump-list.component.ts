@@ -24,6 +24,7 @@ export class PumpListComponent implements OnInit {
 
   loadPumps(): void {
     this.pumpService.getPumps().subscribe(data => {
+      console.log('Полученные насосы:', data);
       this.pumps = data;
     });
   }

@@ -35,7 +35,6 @@
       <td>{{ pump.pumpDescription }}</td>
       <td>{{ pump.imageUrlPath }}</td>
       <td>
-        <a [routerLink]="['/pumps', pump.id]">Детали</a>
         <a [routerLink]="['/pumps/edit', pump.id]">Редактировать</a>
         <button (click)="deletePump(pump.id)">Удалить</button>
       </td>

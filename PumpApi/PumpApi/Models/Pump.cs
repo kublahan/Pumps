@@ -9,7 +9,7 @@ namespace PumpApi.Models
     {
         [Key]
         [Column("id")]
-        public int PumpId { get; set; }
+        public int Id { get; set; }
 
         [Column("name")]
         public string PumpName { get; set; }

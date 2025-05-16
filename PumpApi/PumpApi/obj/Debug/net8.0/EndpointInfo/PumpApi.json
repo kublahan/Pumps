@@ -625,7 +625,7 @@
       "Pump": {
         "type": "object",
         "properties": {
-          "pumpId": {
+          "id": {
             "type": "integer",
             "format": "int32"
           },

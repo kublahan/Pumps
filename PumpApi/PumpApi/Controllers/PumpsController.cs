@@ -34,7 +34,7 @@ public class PumpsController : ControllerBase
             .Include(p => p.MotorDetails)
             .Include(p => p.HousingMaterialDetails)
             .Include(p => p.WheelMaterialDetails)
-            .FirstOrDefaultAsync(p => p.PumpId == id);
+            .FirstOrDefaultAsync(p => p.Id == id);
 
         if (pump == null)
         {
@@ -85,16 +85,16 @@ public class PumpsController : ControllerBase
             .Include(p => p.MotorDetails)
             .Include(p => p.HousingMaterialDetails)
             .Include(p => p.WheelMaterialDetails)
-            .FirstOrDefaultAsync(p => p.PumpId == pump.PumpId);
+            .FirstOrDefaultAsync(p => p.Id == pump.Id);
 
-        return CreatedAtAction(nameof(GetPump), new { id = createdPump.PumpId }, createdPump);
+        return CreatedAtAction(nameof(GetPump), new { id = createdPump.Id }, createdPump);
     }
 
 
     [HttpPut("{id}")]
     public async Task<IActionResult> PutPump(int id, Pump pump)
     {
-        if (id != pump.PumpId)
+        if (id != pump.Id)
         {
             return BadRequest();
         }
@@ -105,7 +105,7 @@ public class PumpsController : ControllerBase
         }
         catch (DbUpdateConcurrencyException)
         {
-            if (!_context.Pumps.Any(e => e.PumpId == id))
+            if (!_context.Pumps.Any(e => e.Id == id))
             {
                 return NotFound();
             }
