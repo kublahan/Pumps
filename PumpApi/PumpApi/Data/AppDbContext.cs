@@ -20,13 +20,15 @@ namespace PumpApi.Data
                 .HasOne(p => p.HousingMaterialDetails)
                 .WithMany()
                 .HasForeignKey(p => p.HousingMaterialForeignKey)
-                .OnDelete(DeleteBehavior.Restrict);
+                .OnDelete(DeleteBehavior.Restrict)
+                .IsRequired(false);
 
             modelBuilder.Entity<Pump>()
                 .HasOne(p => p.WheelMaterialDetails)
                 .WithMany()
                 .HasForeignKey(p => p.WheelMaterialForeignKey)
-                .OnDelete(DeleteBehavior.Restrict);
+                .OnDelete(DeleteBehavior.Restrict)
+                .IsRequired(false);
 
 
             modelBuilder.Entity<Pump>()
@@ -34,7 +36,8 @@ namespace PumpApi.Data
                 .WithMany()
                 .HasForeignKey(p => p.MotorForeignKey)
                 .HasConstraintName("motor_id")
-                .OnDelete(DeleteBehavior.Restrict);
+                .OnDelete(DeleteBehavior.Restrict)
+                .IsRequired(false);
         }
     }
 }

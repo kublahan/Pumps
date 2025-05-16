@@ -45,7 +45,7 @@ public class PumpsController : ControllerBase
 
 
     [HttpPost]
-    public async Task<ActionResult<Pump>> PostPump(PumpDto pumpDto)
+    public async Task<ActionResult<Pump>> PostPump([FromBody] PumpDto pumpDto)
     {
         if (!int.TryParse(pumpDto.MotorForeignKey, out int motorForeignKey))
         {
@@ -80,7 +80,7 @@ public class PumpsController : ControllerBase
         _context.Pumps.Add(pump);
         await _context.SaveChangesAsync();
 
-        // загрузка связанных данных для возврата полного объекта
+
         var createdPump = await _context.Pumps
             .Include(p => p.MotorDetails)
             .Include(p => p.HousingMaterialDetails)
@@ -92,13 +92,32 @@ public class PumpsController : ControllerBase
 
 
     [HttpPut("{id}")]
-    public async Task<IActionResult> PutPump(int id, Pump pump)
+    public async Task<IActionResult> PutPump(int id, [FromBody] UpdatePumpDto pumpDto)
     {
-        if (id != pump.Id)
+        if (id != pumpDto.Id)
         {
             return BadRequest();
         }
+
+        var pump = await _context.Pumps.FindAsync(id);
+        if (pump == null)
+        {
+            return NotFound();
+        }
+
+        pump.PumpName = pumpDto.PumpName;
+        pump.MaxPressure = pumpDto.MaxPressure ?? pump.MaxPressure;
+        pump.LiquidTemperatureCelsius = pumpDto.LiquidTemperatureCelsius ?? pump.LiquidTemperatureCelsius;
+        pump.WeightInKilograms = pumpDto.WeightInKilograms ?? pump.WeightInKilograms;
+        pump.PumpDescription = pumpDto.PumpDescription ?? pump.PumpDescription;
+        pump.ImageUrlPath = pumpDto.ImageUrlPath ?? pump.ImageUrlPath;
+        pump.PriceInRubles = pumpDto.PriceInRubles;
+        pump.MotorForeignKey = pumpDto.MotorForeignKey;
+        pump.HousingMaterialForeignKey = pumpDto.HousingMaterialForeignKey;
+        pump.WheelMaterialForeignKey = pumpDto.WheelMaterialForeignKey;
+
         _context.Entry(pump).State = EntityState.Modified;
+
         try
         {
             await _context.SaveChangesAsync();

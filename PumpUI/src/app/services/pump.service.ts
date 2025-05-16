@@ -4,6 +4,8 @@ import { HttpClient } from '@angular/common/http';
 import { Observable} from 'rxjs';
 import { Motor } from './motors.service';
 import { Material } from './materials.service';
+import { UpdatePumpDto } from '../models/update-pump.dto';
+import { PumpCreateDto } from '../models/create-pump.dto';
 
 export interface Pump {
   id: number;
@@ -38,13 +40,13 @@ export class PumpService {
     return this.http.get<Pump>(`${this.apiUrl}/${id}`);
   }
 
-  createPump(pump: Omit<Pump, 'id' | 'motor' | 'housingMaterial' | 'wheelMaterial'>): Observable<Pump> {
-    return this.http.post<Pump>(this.apiUrl, pump);
-  }
+  createPump(pumpDto: PumpCreateDto): Observable<Pump> { 
+  return this.http.post<Pump>(this.apiUrl, pumpDto);
+}
 
-  updatePump(id: number, pump: Omit<Pump, 'id' | 'motor' | 'housingMaterial' | 'wheelMaterial'>): Observable<any> {
-    return this.http.put(`${this.apiUrl}/${id}`, pump);
-  }
+  updatePump(id: number, pump: UpdatePumpDto): Observable<any> {
+  return this.http.put(`${this.apiUrl}/${id}`, pump);
+}
 
   deletePump(id: number): Observable<any> {
     return this.http.delete(`${this.apiUrl}/${id}`);

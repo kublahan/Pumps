@@ -303,8 +303,8 @@
         "IsRequired": true
       },
       {
-        "Name": "pump",
-        "Type": "PumpApi.Models.Pump",
+        "Name": "pumpDto",
+        "Type": "PumpApi.Models.UpdatePumpDto",
         "IsRequired": true
       }
     ],

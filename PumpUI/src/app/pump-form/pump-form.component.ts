@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { PumpService, Pump } from '../services/pump.service';
-import { Router, RouterModule } from '@angular/router';
+import { Router, RouterModule, ActivatedRoute } from '@angular/router';
 import { MotorService, Motor } from '../services/motors.service';
 import { MaterialService, Material } from '../services/materials.service';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
+import { switchMap } from 'rxjs/operators';
+import { UpdatePumpDto } from '../models/update-pump.dto';
 
 @Component({
   selector: 'app-pump-form',
@@ -31,7 +33,8 @@ export class PumpFormComponent implements OnInit {
     private pumpService: PumpService,
     private motorService: MotorService,
     private materialService: MaterialService,
-    private router: Router
+    private router: Router,
+    private route: ActivatedRoute
   ) {
     this.pumpForm = this.fb.group({
       PumpName: ['', Validators.required],
@@ -49,6 +52,21 @@ export class PumpFormComponent implements OnInit {
 
   ngOnInit(): void {
     this.loadDependencies();
+    this.route.paramMap.pipe(
+      switchMap(params => {
+        const id = params.get('id');
+        if (id) {
+          this.isEditMode = true;
+          this.pumpId = +id;
+          return this.pumpService.getPump(this.pumpId);
+        }
+        return [];
+      })
+    ).subscribe(pump => {
+      if (pump) {
+        this.populateForm(pump);
+      }
+    });
   }
 
   loadDependencies(): void {
@@ -59,56 +77,79 @@ export class PumpFormComponent implements OnInit {
     });
   }
 
-  onSubmit(): void {
+  populateForm(pump: Pump): void {
+    this.pumpForm.patchValue({
+      PumpName: pump.pumpName,
+      MaxPressure: pump.maxPressure,
+      LiquidTemperatureCelsius: pump.liquidTemperatureCelsius,
+      WeightInKilograms: pump.weightInKilograms,
+      PumpDescription: pump.pumpDescription,
+      ImageUrlPath: pump.imageUrlPath,
+      PriceInRubles: pump.priceInRubles,
+      MotorForeignKey: pump.motorForeignKey,
+      HousingMaterialForeignKey: pump.housingMaterialForeignKey,
+      WheelMaterialForeignKey: pump.wheelMaterialForeignKey,
+    });
+  }
+
+   onSubmit(): void {
   if (this.pumpForm.valid) {
-    console.log('Значения формы перед отправкой:', this.pumpForm.value);
-    const newPump: Pump = {
-      id: 0,
-      pumpName: this.pumpForm.value.PumpName,
-      maxPressure: this.pumpForm.value.MaxPressure,
-      liquidTemperatureCelsius: this.pumpForm.value.LiquidTemperatureCelsius,
-      weightInKilograms: this.pumpForm.value.WeightInKilograms,
-      pumpDescription: this.pumpForm.value.PumpDescription,
-      imageUrlPath: this.pumpForm.value.ImageUrlPath,
-      priceInRubles: Number(this.pumpForm.value.PriceInRubles),
-      motorForeignKey: this.pumpForm.value.MotorForeignKey,
-      housingMaterialForeignKey: this.pumpForm.value.HousingMaterialForeignKey,
-      wheelMaterialForeignKey: this.pumpForm.value.WheelMaterialForeignKey,
-      motorDetails: {
-        id: 0,
-        name: 'Default Motor Name',
-        powerKw: 0,
-        currentA: 0,
-        speedRpm: 0,
-        description: '',
-        priceRub: 0,
-        motorType: 'Default Type'
-      },
-      housingMaterialDetails: {
-        id: 0,
-        name: '',
-        description: ''
-      },
-      wheelMaterialDetails: {
-        id: 0,
-        name: '',
-        description: ''
-      }
+    const pumpData = this.pumpForm.value;
+    const updatePumpDto: UpdatePumpDto = {
+      Id: this.pumpId!,
+      PumpName: pumpData.PumpName,
+      MaxPressure: pumpData.MaxPressure,
+      LiquidTemperatureCelsius: pumpData.LiquidTemperatureCelsius,
+      WeightInKilograms: pumpData.WeightInKilograms,
+      PumpDescription: pumpData.PumpDescription,
+      ImageUrlPath: pumpData.ImageUrlPath,
+      PriceInRubles: Number(pumpData.PriceInRubles),
+      MotorForeignKey: Number(pumpData.MotorForeignKey),
+      HousingMaterialForeignKey: Number(pumpData.HousingMaterialForeignKey),
+      WheelMaterialForeignKey: Number(pumpData.WheelMaterialForeignKey),
     };
 
-    this.pumpService.createPump(newPump).subscribe({
-      next: (response) => {
-        console.log('Насос успешно добавлен', response);
-        this.router.navigate(['/pumps']);
-      },
-      error: (error) => {
-        console.error('Ошибка при добавлении насоса', error);
-      }
+    if (this.isEditMode && this.pumpId !== null) {
+      this.pumpService.updatePump(this.pumpId, updatePumpDto).subscribe({
+        next: (response) => {
+          console.log('Насос успешно обновлен', response);
+          this.router.navigate(['/pumps']);
+        },
+        error: (error) => {
+          console.error('Ошибка при обновлении насоса', error);
+        }
+      });
+    } else {
+
+    const pumpData = this.pumpForm.value;
+    const newPumpPayload = {
+        pumpName: pumpData.PumpName,
+        maxPressure: pumpData.MaxPressure === null || pumpData.MaxPressure === '' ? null : Number(pumpData.MaxPressure),
+        liquidTemperatureCelsius: pumpData.LiquidTemperatureCelsius === null || pumpData.LiquidTemperatureCelsius === '' ? null : Number(pumpData.LiquidTemperatureCelsius),
+        weightInKilograms: pumpData.WeightInKilograms === null || pumpData.WeightInKilograms === '' ? null : Number(pumpData.WeightInKilograms),
+        pumpDescription: pumpData.PumpDescription || null,
+        imageUrlPath: pumpData.ImageUrlPath || null,
+        priceInRubles: Number(pumpData.PriceInRubles),
+        motorForeignKey: String(pumpData.MotorForeignKey),
+        housingMaterialForeignKey: String(pumpData.HousingMaterialForeignKey),
+        wheelMaterialForeignKey: String(pumpData.WheelMaterialForeignKey),
+    };
+      this.pumpService.createPump(newPumpPayload as any).subscribe({
+        next: (response) => {
+            console.log('Насос успешно добавлен', response);
+            this.router.navigate(['/pumps']);
+        },
+        error: (error) => {
+            console.error('Ошибка при добавлении насоса', error);
+            console.log('Data sent for creation:', newPumpPayload);
+        }
     });
+    }
   } else {
     console.log('Форма невалидна');
   }
 }
+
   onCancel(): void {
     this.router.navigate(['/pumps']);
   }
