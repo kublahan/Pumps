@@ -1,1 +1,105 @@
-<p>pump-form works!</p>
+<h2>Добавить новый насос</h2>
+
+<form [formGroup]="pumpForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="pumpName">Наименование:</label>
+    <input type="text" id="pumpName" formControlName="PumpName" required>
+    <div *ngIf="pumpForm.controls['PumpName'].invalid && (pumpForm.controls['PumpName'].dirty || pumpForm.controls['PumpName'].touched)">
+      <div *ngIf="pumpForm.controls['PumpName'].errors?.['required']">
+        Наименование обязательно.
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <label for="maxPressure">Макс. давление (бар):</label>
+    <input type="number" id="maxPressure" formControlName="MaxPressure" required>
+    <div *ngIf="pumpForm.controls['MaxPressure'].invalid && (pumpForm.controls['MaxPressure'].dirty || pumpForm.controls['MaxPressure'].touched)">
+      <div *ngIf="pumpForm.controls['MaxPressure'].errors?.['required']">
+        Макс. давление обязательно.
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <label for="liquidTemperatureCelsius">Температура жидкости (°C):</label>
+    <input type="number" id="liquidTemperatureCelsius" formControlName="LiquidTemperatureCelsius" required>
+    <div *ngIf="pumpForm.controls['LiquidTemperatureCelsius'].invalid && (pumpForm.controls['LiquidTemperatureCelsius'].dirty || pumpForm.controls['LiquidTemperatureCelsius'].touched)">
+      <div *ngIf="pumpForm.controls['LiquidTemperatureCelsius'].errors?.['required']">
+        Температура жидкости обязательна.
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <label for="weightInKilograms">Вес (кг):</label>
+    <input type="number" id="weightInKilograms" formControlName="WeightInKilograms" required>
+    <div *ngIf="pumpForm.controls['WeightInKilograms'].invalid && (pumpForm.controls['WeightInKilograms'].dirty || pumpForm.controls['WeightInKilograms'].touched)">
+      <div *ngIf="pumpForm.controls['WeightInKilograms'].errors?.['required']">
+        Вес обязателен.
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <label for="pumpDescription">Описание:</label>
+    <textarea id="pumpDescription" formControlName="PumpDescription"></textarea>
+  </div>
+
+  <div>
+    <label for="imageUrlPath">URL изображения:</label>
+    <input type="text" id="imageUrlPath" formControlName="ImageUrlPath">
+  </div>
+
+  <div>
+    <label for="priceInRubles">Цена (руб.):</label>
+    <input type="number" id="priceInRubles" formControlName="PriceInRubles" required>
+    <div *ngIf="pumpForm.controls['PriceInRubles'].invalid && (pumpForm.controls['PriceInRubles'].dirty || pumpForm.controls['PriceInRubles'].touched)">
+      <div *ngIf="pumpForm.controls['PriceInRubles'].errors?.['required']">
+        Цена обязательна.
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <label for="motorForeignKey">Мотор:</label>
+    <select id="motorForeignKey" formControlName="MotorForeignKey" required>
+      <option value="" disabled>Выберите мотор</option>
+      <option *ngFor="let motor of motors" [value]="motor.id">{{ motor.name }} (ID: {{ motor.id }})</option>
+    </select>
+    <div *ngIf="pumpForm.controls['MotorForeignKey'].invalid && (pumpForm.controls['MotorForeignKey'].dirty || pumpForm.controls['MotorForeignKey'].touched)">
+      <div *ngIf="pumpForm.controls['MotorForeignKey'].errors?.['required']">
+        Мотор обязателен.
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <label for="housingMaterialForeignKey">Материал корпуса:</label>
+    <select id="housingMaterialForeignKey" formControlName="HousingMaterialForeignKey" required>
+      <option value="" disabled>Выберите материал корпуса</option>
+      <option *ngFor="let material of housingMaterials" [value]="material.id">{{ material.name }} (ID: {{ material.id }})</option>
+    </select>
+    <div *ngIf="pumpForm.controls['HousingMaterialForeignKey'].invalid && (pumpForm.controls['HousingMaterialForeignKey'].dirty || pumpForm.controls['HousingMaterialForeignKey'].touched)">
+      <div *ngIf="pumpForm.controls['HousingMaterialForeignKey'].errors?.['required']">
+        Материал корпуса обязателен.
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <label for="wheelMaterialForeignKey">Материал рабочего колеса:</label>
+    <select id="wheelMaterialForeignKey" formControlName="WheelMaterialForeignKey" required>
+      <option value="" disabled>Выберите материал рабочего колеса</option>
+      <option *ngFor="let material of wheelMaterials" [value]="material.id">{{ material.name }} (ID: {{ material.id }})</option>
+    </select>
+    <div *ngIf="pumpForm.controls['WheelMaterialForeignKey'].invalid && (pumpForm.controls['WheelMaterialForeignKey'].dirty || pumpForm.controls['WheelMaterialForeignKey'].touched)">
+      <div *ngIf="pumpForm.controls['WheelMaterialForeignKey'].errors?.['required']">
+        Материал рабочего колеса обязателен.
+      </div>
+    </div>
+  </div>
+
+  <button type="submit" [disabled]="!pumpForm.valid">Сохранить</button>
+  <button type="button" (click)="onCancel()">Отмена</button>
+</form>

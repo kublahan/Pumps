@@ -12,6 +12,7 @@ export interface Motor {
   speedRpm: number; 
   description: string;
   priceRub: number;
+  motorType: string;
 }
 
 @Injectable({

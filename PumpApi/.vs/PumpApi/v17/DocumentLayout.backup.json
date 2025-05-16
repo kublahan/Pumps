@@ -3,40 +3,40 @@
   "WorkspaceRootPath": "D:\\Programming\\Projects\\.NetProject\\PumpApi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B5EC687B-033E-4772-A3A8-24F1916D9110}|PumpApi\\PumpApi.csproj|d:\\programming\\projects\\.netproject\\pumpapi\\pumpapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{B5EC687B-033E-4772-A3A8-24F1916D9110}|PumpApi\\PumpApi.csproj|solutionrelative:pumpapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B5EC687B-033E-4772-A3A8-24F1916D9110}|PumpApi\\PumpApi.csproj|d:\\programming\\projects\\.netproject\\pumpapi\\pumpapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B5EC687B-033E-4772-A3A8-24F1916D9110}|PumpApi\\PumpApi.csproj|solutionrelative:pumpapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B5EC687B-033E-4772-A3A8-24F1916D9110}|PumpApi\\PumpApi.csproj|d:\\programming\\projects\\.netproject\\pumpapi\\pumpapi\\models\\pump.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B5EC687B-033E-4772-A3A8-24F1916D9110}|PumpApi\\PumpApi.csproj|solutionrelative:pumpapi\\models\\pump.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B5EC687B-033E-4772-A3A8-24F1916D9110}|PumpApi\\PumpApi.csproj|d:\\programming\\projects\\.netproject\\pumpapi\\pumpapi\\controllers\\pumpscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5EC687B-033E-4772-A3A8-24F1916D9110}|PumpApi\\PumpApi.csproj|solutionrelative:pumpapi\\controllers\\pumpscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B5EC687B-033E-4772-A3A8-24F1916D9110}|PumpApi\\PumpApi.csproj|d:\\programming\\projects\\.netproject\\pumpapi\\pumpapi\\models\\motor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B5EC687B-033E-4772-A3A8-24F1916D9110}|PumpApi\\PumpApi.csproj|solutionrelative:pumpapi\\models\\motor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B5EC687B-033E-4772-A3A8-24F1916D9110}|PumpApi\\PumpApi.csproj|d:\\programming\\projects\\.netproject\\pumpapi\\pumpapi\\models\\material.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B5EC687B-033E-4772-A3A8-24F1916D9110}|PumpApi\\PumpApi.csproj|solutionrelative:pumpapi\\models\\material.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B5EC687B-033E-4772-A3A8-24F1916D9110}|PumpApi\\PumpApi.csproj|d:\\programming\\projects\\.netproject\\pumpapi\\pumpapi\\models\\pump.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5EC687B-033E-4772-A3A8-24F1916D9110}|PumpApi\\PumpApi.csproj|solutionrelative:pumpapi\\models\\pump.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B5EC687B-033E-4772-A3A8-24F1916D9110}|PumpApi\\PumpApi.csproj|d:\\programming\\projects\\.netproject\\pumpapi\\pumpapi\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B5EC687B-033E-4772-A3A8-24F1916D9110}|PumpApi\\PumpApi.csproj|solutionrelative:pumpapi\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B5EC687B-033E-4772-A3A8-24F1916D9110}|PumpApi\\PumpApi.csproj|d:\\programming\\projects\\.netproject\\pumpapi\\pumpapi\\controllers\\pumpscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B5EC687B-033E-4772-A3A8-24F1916D9110}|PumpApi\\PumpApi.csproj|solutionrelative:pumpapi\\controllers\\pumpscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B5EC687B-033E-4772-A3A8-24F1916D9110}|PumpApi\\PumpApi.csproj|d:\\programming\\projects\\.netproject\\pumpapi\\pumpapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5EC687B-033E-4772-A3A8-24F1916D9110}|PumpApi\\PumpApi.csproj|solutionrelative:pumpapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5EC687B-033E-4772-A3A8-24F1916D9110}|PumpApi\\PumpApi.csproj|d:\\programming\\projects\\.netproject\\pumpapi\\pumpapi\\models\\material.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5EC687B-033E-4772-A3A8-24F1916D9110}|PumpApi\\PumpApi.csproj|solutionrelative:pumpapi\\models\\material.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5EC687B-033E-4772-A3A8-24F1916D9110}|PumpApi\\PumpApi.csproj|d:\\programming\\projects\\.netproject\\pumpapi\\pumpapi\\controllers\\materialscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5EC687B-033E-4772-A3A8-24F1916D9110}|PumpApi\\PumpApi.csproj|solutionrelative:pumpapi\\controllers\\materialscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B5EC687B-033E-4772-A3A8-24F1916D9110}|PumpApi\\PumpApi.csproj|d:\\programming\\projects\\.netproject\\pumpapi\\pumpapi\\controllers\\motorscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B5EC687B-033E-4772-A3A8-24F1916D9110}|PumpApi\\PumpApi.csproj|solutionrelative:pumpapi\\controllers\\motorscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B5EC687B-033E-4772-A3A8-24F1916D9110}|PumpApi\\PumpApi.csproj|d:\\programming\\projects\\.netproject\\pumpapi\\pumpapi\\controllers\\materialscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B5EC687B-033E-4772-A3A8-24F1916D9110}|PumpApi\\PumpApi.csproj|solutionrelative:pumpapi\\controllers\\materialscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B5EC687B-033E-4772-A3A8-24F1916D9110}|PumpApi\\PumpApi.csproj|d:\\programming\\projects\\.netproject\\pumpapi\\pumpapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B5EC687B-033E-4772-A3A8-24F1916D9110}|PumpApi\\PumpApi.csproj|solutionrelative:pumpapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B5EC687B-033E-4772-A3A8-24F1916D9110}|PumpApi\\PumpApi.csproj|d:\\programming\\projects\\.netproject\\pumpapi\\pumpapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -50,19 +50,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "Motor.cs",
               "DocumentMoniker": "D:\\Programming\\Projects\\.NetProject\\PumpApi\\PumpApi\\Models\\Motor.cs",
               "RelativeDocumentMoniker": "PumpApi\\Models\\Motor.cs",
               "ToolTip": "D:\\Programming\\Projects\\.NetProject\\PumpApi\\PumpApi\\Models\\Motor.cs",
               "RelativeToolTip": "PumpApi\\Models\\Motor.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAoAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAuwCIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-15T11:58:48.887Z"
+              "WhenOpened": "2025-05-15T11:58:48.887Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -72,25 +73,27 @@
               "RelativeDocumentMoniker": "PumpApi\\Models\\Pump.cs",
               "ToolTip": "D:\\Programming\\Projects\\.NetProject\\PumpApi\\PumpApi\\Models\\Pump.cs",
               "RelativeToolTip": "PumpApi\\Models\\Pump.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAA9wAYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAAwDQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-15T11:48:13.797Z"
+              "WhenOpened": "2025-05-15T11:48:13.797Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "D:\\Programming\\Projects\\.NetProject\\PumpApi\\PumpApi\\Data\\AppDbContext.cs",
               "RelativeDocumentMoniker": "PumpApi\\Data\\AppDbContext.cs",
               "ToolTip": "D:\\Programming\\Projects\\.NetProject\\PumpApi\\PumpApi\\Data\\AppDbContext.cs",
               "RelativeToolTip": "PumpApi\\Data\\AppDbContext.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAcwCcAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-15T12:00:56.346Z"
+              "WhenOpened": "2025-05-15T12:00:56.346Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Material.cs",
               "DocumentMoniker": "D:\\Programming\\Projects\\.NetProject\\PumpApi\\PumpApi\\Models\\Material.cs",
               "RelativeDocumentMoniker": "PumpApi\\Models\\Material.cs",
@@ -102,19 +105,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 6,
               "Title": "MaterialsController.cs",
               "DocumentMoniker": "D:\\Programming\\Projects\\.NetProject\\PumpApi\\PumpApi\\Controllers\\MaterialsController.cs",
               "RelativeDocumentMoniker": "PumpApi\\Controllers\\MaterialsController.cs",
               "ToolTip": "D:\\Programming\\Projects\\.NetProject\\PumpApi\\PumpApi\\Controllers\\MaterialsController.cs",
               "RelativeToolTip": "PumpApi\\Controllers\\MaterialsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAABJAAAAAAAAAA==",
+              "ViewState": "AgIAACcAAAAAAAAAAAAUwEoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-15T12:16:30.026Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 8,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\Programming\\Projects\\.NetProject\\PumpApi\\PumpApi\\appsettings.json",
               "RelativeDocumentMoniker": "PumpApi\\appsettings.json",
@@ -122,8 +125,7 @@
               "RelativeToolTip": "PumpApi\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-05-15T11:48:50.072Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-15T11:48:50.072Z"
             },
             {
               "$type": "Document",
@@ -139,27 +141,29 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Programming\\Projects\\.NetProject\\PumpApi\\PumpApi\\Program.cs",
               "RelativeDocumentMoniker": "PumpApi\\Program.cs",
               "ToolTip": "D:\\Programming\\Projects\\.NetProject\\PumpApi\\PumpApi\\Program.cs",
               "RelativeToolTip": "PumpApi\\Program.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-15T11:54:11.744Z"
+              "WhenOpened": "2025-05-15T11:54:11.744Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
               "Title": "PumpsController.cs",
               "DocumentMoniker": "D:\\Programming\\Projects\\.NetProject\\PumpApi\\PumpApi\\Controllers\\PumpsController.cs",
               "RelativeDocumentMoniker": "PumpApi\\Controllers\\PumpsController.cs",
               "ToolTip": "D:\\Programming\\Projects\\.NetProject\\PumpApi\\PumpApi\\Controllers\\PumpsController.cs",
               "RelativeToolTip": "PumpApi\\Controllers\\PumpsController.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAowCQAAAA2AAAAAAAAAA==",
+              "ViewState": "AgIAAB8AAAAAAAAAAAApwDAAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-15T12:15:58.816Z"
+              "WhenOpened": "2025-05-15T12:15:58.816Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -169,7 +173,7 @@
               "RelativeDocumentMoniker": "PumpApi\\Controllers\\MotorsController.cs",
               "ToolTip": "D:\\Programming\\Projects\\.NetProject\\PumpApi\\PumpApi\\Controllers\\MotorsController.cs",
               "RelativeToolTip": "PumpApi\\Controllers\\MotorsController.cs",
-              "ViewState": "AgIAADQAAAAAAAAAAAAcwA4AAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAACcAAAAAAAAAAAAUwEoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-15T12:16:14.5Z"
             }

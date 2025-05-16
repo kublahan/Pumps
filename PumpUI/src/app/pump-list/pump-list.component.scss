@@ -25,7 +25,7 @@ table {
   margin-bottom: 1.5rem;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   border-radius: 0.5rem;
-  overflow: hidden; /* To contain the border-radius for thead/tbody */
+  overflow: hidden;
 }
 
 thead {
@@ -51,7 +51,7 @@ tbody {
       border-bottom: 1px solid #dee2e6;
 
       &:last-child {
-        white-space: nowrap; /* Prevent action buttons from wrapping */
+        white-space: nowrap;
       }
     }
   }
@@ -69,7 +69,7 @@ a {
   }
 }
 
-.ng-star-inserted { /* Style for the "Нет данных о насосах" div */
+.ng-star-inserted {
   padding: 1rem;
   font-style: italic;
   color: #6c757d;
