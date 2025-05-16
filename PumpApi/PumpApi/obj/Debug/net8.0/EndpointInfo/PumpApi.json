@@ -420,17 +420,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Pump"
+                "$ref": "#/components/schemas/PumpDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Pump"
+                "$ref": "#/components/schemas/PumpDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Pump"
+                "$ref": "#/components/schemas/PumpDto"
               }
             }
           }
@@ -677,6 +677,55 @@
           },
           "wheelMaterialDetails": {
             "$ref": "#/components/schemas/Material"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PumpDto": {
+        "type": "object",
+        "properties": {
+          "pumpName": {
+            "type": "string",
+            "nullable": true
+          },
+          "maxPressure": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "liquidTemperatureCelsius": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "weightInKilograms": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "pumpDescription": {
+            "type": "string",
+            "nullable": true
+          },
+          "imageUrlPath": {
+            "type": "string",
+            "nullable": true
+          },
+          "priceInRubles": {
+            "type": "number",
+            "format": "double"
+          },
+          "motorForeignKey": {
+            "type": "string",
+            "nullable": true
+          },
+          "housingMaterialForeignKey": {
+            "type": "string",
+            "nullable": true
+          },
+          "wheelMaterialForeignKey": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false

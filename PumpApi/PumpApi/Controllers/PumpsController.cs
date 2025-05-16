@@ -45,11 +45,49 @@ public class PumpsController : ControllerBase
 
 
     [HttpPost]
-    public async Task<ActionResult<Pump>> PostPump(Pump pump)
+    public async Task<ActionResult<Pump>> PostPump(PumpDto pumpDto)
     {
+        if (!int.TryParse(pumpDto.MotorForeignKey, out int motorForeignKey))
+        {
+            return BadRequest("Invalid MotorForeignKey");
+        }
+
+        if (!int.TryParse(pumpDto.HousingMaterialForeignKey, out int housingMaterialForeignKey))
+        {
+            return BadRequest("Invalid HousingMaterialForeignKey");
+        }
+
+        if (!int.TryParse(pumpDto.WheelMaterialForeignKey, out int wheelMaterialForeignKey))
+        {
+            return BadRequest("Invalid WheelMaterialForeignKey");
+        }
+
+        var pump = new Pump
+        {
+            PumpName = pumpDto.PumpName,
+            MaxPressure = pumpDto.MaxPressure ?? 0,
+            LiquidTemperatureCelsius = pumpDto.LiquidTemperatureCelsius ?? 0,
+            WeightInKilograms = pumpDto.WeightInKilograms ?? 0,
+            PumpDescription = pumpDto.PumpDescription,
+            ImageUrlPath = pumpDto.ImageUrlPath,
+            PriceInRubles = pumpDto.PriceInRubles,
+            MotorForeignKey = motorForeignKey,
+            HousingMaterialForeignKey = housingMaterialForeignKey,
+            WheelMaterialForeignKey = wheelMaterialForeignKey
+
+        };
+
         _context.Pumps.Add(pump);
         await _context.SaveChangesAsync();
-        return CreatedAtAction(nameof(GetPump), new { id = pump.PumpId }, pump);
+
+        // загрузка связанных данных для возврата полного объекта
+        var createdPump = await _context.Pumps
+            .Include(p => p.MotorDetails)
+            .Include(p => p.HousingMaterialDetails)
+            .Include(p => p.WheelMaterialDetails)
+            .FirstOrDefaultAsync(p => p.PumpId == pump.PumpId);
+
+        return CreatedAtAction(nameof(GetPump), new { id = createdPump.PumpId }, createdPump);
     }
 
 

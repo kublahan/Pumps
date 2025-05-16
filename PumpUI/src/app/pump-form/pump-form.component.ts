@@ -61,6 +61,7 @@ export class PumpFormComponent implements OnInit {
 
   onSubmit(): void {
   if (this.pumpForm.valid) {
+    console.log('Значения формы перед отправкой:', this.pumpForm.value);
     const newPump: Pump = {
       id: 0,
       pumpName: this.pumpForm.value.PumpName,
@@ -70,18 +71,18 @@ export class PumpFormComponent implements OnInit {
       pumpDescription: this.pumpForm.value.PumpDescription,
       imageUrlPath: this.pumpForm.value.ImageUrlPath,
       priceInRubles: Number(this.pumpForm.value.PriceInRubles),
-      motorForeignKey: Number(this.pumpForm.value.MotorForeignKey),
-      housingMaterialForeignKey: Number(this.pumpForm.value.HousingMaterialForeignKey),
-      wheelMaterialForeignKey: Number(this.pumpForm.value.WheelMaterialForeignKey),
+      motorForeignKey: this.pumpForm.value.MotorForeignKey,
+      housingMaterialForeignKey: this.pumpForm.value.HousingMaterialForeignKey,
+      wheelMaterialForeignKey: this.pumpForm.value.WheelMaterialForeignKey,
       motorDetails: {
         id: 0,
-        name: 'Default Motor Name', // Предоставьте значение по умолчанию
+        name: 'Default Motor Name',
         powerKw: 0,
         currentA: 0,
         speedRpm: 0,
         description: '',
         priceRub: 0,
-        motorType: 'Default Type' // Предоставьте значение по умолчанию
+        motorType: 'Default Type'
       },
       housingMaterialDetails: {
         id: 0,

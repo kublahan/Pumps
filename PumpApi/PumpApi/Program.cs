@@ -3,8 +3,7 @@ using PumpApi.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Logging.AddConsole();
-builder.Logging.SetMinimumLevel(LogLevel.Information);//добавить логирование
+
 
 // Add services to the container.
 

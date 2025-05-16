@@ -246,8 +246,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "pump",
-        "Type": "PumpApi.Models.Pump",
+        "Name": "pumpDto",
+        "Type": "PumpApi.Models.PumpDto",
         "IsRequired": true
       }
     ],
