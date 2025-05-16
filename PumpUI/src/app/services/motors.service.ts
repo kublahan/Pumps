@@ -19,7 +19,7 @@ export interface Motor {
 })
 export class MotorService {
 
-  private apiUrl = 'http://localhost:5000/api/Motors';
+  private apiUrl = 'http://localhost:5282/api/Motors';
 
   constructor(private http: HttpClient) { }
 

@@ -1,0 +1,22 @@
+<h2>Детали Материала</h2>
+
+<div *ngIf="material; else loading">
+  <div>
+    <strong>ID:</strong> {{ material?.id }}
+  </div>
+  <div>
+    <strong>Наименование:</strong> {{ material?.name }}
+  </div>
+  <div>
+    <strong>Описание:</strong> {{ material?.description }}
+  </div>
+  <button routerLink="/pumps">Назад к списку насосов</button>
+</div>
+
+<ng-template #loading>
+  <p>Загрузка деталей материала...</p>
+</ng-template>
+
+<div *ngIf="!material && materialId && !loading">
+  <p>Материал с ID {{ materialId }} не найден.</p>
+</div>

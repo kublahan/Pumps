@@ -46,3 +46,4 @@ D:\Programming\Projects\.NetProject\PumpApi\PumpApi\obj\Debug\net8.0\staticwebas
 D:\Programming\Projects\.NetProject\PumpApi\PumpApi\obj\Debug\net8.0\staticwebassets.build.endpoints.json
 D:\Programming\Projects\.NetProject\PumpApi\PumpApi\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 D:\Programming\Projects\.NetProject\PumpApi\PumpApi\obj\Debug\net8.0\PumpApi.csproj.Up2Date
+D:\Programming\Projects\.NetProject\PumpApi\PumpApi\obj\Debug\net8.0\PumpApi.sourcelink.json

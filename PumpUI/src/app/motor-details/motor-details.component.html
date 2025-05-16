@@ -1,0 +1,34 @@
+<h2>Детали Мотора</h2>
+
+<div *ngIf="motor; else loading">
+  <div>
+    <strong>ID:</strong> {{ motor?.id }}
+  </div>
+  <div>
+    <strong>Наименование:</strong> {{ motor?.name }}
+  </div>
+  <div>
+    <strong>Мощность (кВт):</strong> {{ motor?.powerKw }}
+  </div>
+  <div>
+    <strong>Ток (А):</strong> {{ motor?.currentA }}
+  </div>
+  <div>
+    <strong>Скорость вращения (об/мин):</strong> {{ motor?.speedRpm }}
+  </div>
+  <div>
+    <strong>Описание:</strong> {{ motor?.description }}
+  </div>
+  <div>
+    <strong>Цена (руб.):</strong> {{ motor?.priceRub }}
+  </div>
+  <button routerLink="/pumps">Назад к списку насосов</button>
+</div>
+
+<ng-template #loading>
+  <p>Загрузка деталей мотора...</p>
+</ng-template>
+
+<div *ngIf="!motor && motorId && !loading">
+  <p>Мотор с ID {{ motorId }} не найден.</p>
+</div>

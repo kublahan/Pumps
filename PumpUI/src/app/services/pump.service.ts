@@ -1,8 +1,9 @@
 // src/app/services/pump.service.ts
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
-
+import { Observable} from 'rxjs';
+import { Motor } from './motors.service';
+import { Material } from './materials.service';
 
 export interface Pump {
   id: number;
@@ -14,11 +15,11 @@ export interface Pump {
   imageUrlPath: string;
   priceInRubles: number;
   motorForeignKey: number;
-  motorDetails?: any;
+  motorDetails: Motor;
   housingMaterialForeignKey: number;
-  housingMaterialDetails?: any;
+  housingMaterialDetails: Material;
   wheelMaterialForeignKey: number;
-  wheelMaterialDetails?: any;
+  wheelMaterialDetails: Material;
 }
 
 @Injectable({
@@ -34,18 +35,18 @@ export class PumpService {
   }
 
   getPump(id: number): Observable<Pump> {
-    return this.http.get<Pump>(`<span class="math-inline">\{this\.apiUrl\}/</span>{id}`);
+    return this.http.get<Pump>(`${this.apiUrl}/${id}`);
   }
 
-  createPump(pump: Pump): Observable<Pump> {
+  createPump(pump: Omit<Pump, 'id' | 'motor' | 'housingMaterial' | 'wheelMaterial'>): Observable<Pump> {
     return this.http.post<Pump>(this.apiUrl, pump);
   }
 
-  updatePump(id: number, pump: Pump): Observable<any> {
-    return this.http.put(`<span class="math-inline">\{this\.apiUrl\}/</span>{id}`, pump);
+  updatePump(id: number, pump: Omit<Pump, 'id' | 'motor' | 'housingMaterial' | 'wheelMaterial'>): Observable<any> {
+    return this.http.put(`${this.apiUrl}/${id}`, pump);
   }
 
   deletePump(id: number): Observable<any> {
-    return this.http.delete(`<span class="math-inline">\{this\.apiUrl\}/</span>{id}`);
+    return this.http.delete(`${this.apiUrl}/${id}`);
   }
 }
