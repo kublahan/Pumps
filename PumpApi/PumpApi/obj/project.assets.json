@@ -5861,11 +5861,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Programming\\Projects\\.NetProject\\PumpApi\\PumpApi\\PumpApi.csproj",
+      "projectUniqueName": "D:\\Programming\\Projects\\PumpsProj\\Pumps\\PumpApi\\PumpApi\\PumpApi.csproj",
       "projectName": "PumpApi",
-      "projectPath": "D:\\Programming\\Projects\\.NetProject\\PumpApi\\PumpApi\\PumpApi.csproj",
+      "projectPath": "D:\\Programming\\Projects\\PumpsProj\\Pumps\\PumpApi\\PumpApi\\PumpApi.csproj",
       "packagesPath": "C:\\Users\\kuzia\\.nuget\\packages\\",
-      "outputPath": "D:\\Programming\\Projects\\.NetProject\\PumpApi\\PumpApi\\obj\\",
+      "outputPath": "D:\\Programming\\Projects\\PumpsProj\\Pumps\\PumpApi\\PumpApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

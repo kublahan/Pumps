@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "pCr3HaFnIV0=",
+  "dgSpecHash": "PWC4nNirmaE=",
   "success": true,
-  "projectFilePath": "D:\\Programming\\Projects\\.NetProject\\PumpApi\\PumpApi\\PumpApi.csproj",
+  "projectFilePath": "D:\\Programming\\Projects\\PumpsProj\\Pumps\\PumpApi\\PumpApi\\PumpApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kuzia\\.nuget\\packages\\microsoft.entityframeworkcore\\9.0.1\\microsoft.entityframeworkcore.9.0.1.nupkg.sha512",
     "C:\\Users\\kuzia\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\9.0.1\\microsoft.entityframeworkcore.abstractions.9.0.1.nupkg.sha512",

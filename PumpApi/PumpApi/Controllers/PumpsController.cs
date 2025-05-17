@@ -151,7 +151,7 @@ public class PumpsController : ControllerBase
             return BadRequest("Invalid WheelMaterialForeignKey");
         }
 
-        // Проверяем, был ли предоставлен новый файл изображения
+
         if (pumpWithImageDto.ImageFile != null && pumpWithImageDto.ImageFile.Length > 0)
         {
             byte[] imageData = null;
@@ -166,23 +166,19 @@ public class PumpsController : ControllerBase
                         {
                             image.Save(jpegMemoryStream, ImageFormat.Jpeg);
                             imageData = jpegMemoryStream.ToArray();
-                            Console.WriteLine($"[БЭКЕНД - PUT] Новое изображение преобразовано в JPEG, размер: {imageData?.Length} байт");
-                            pump.ImageUrlPath = imageData; // Обновляем бинарные данные новым изображением
+                            
+                            pump.ImageUrlPath = imageData;
                         }
                     }
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"[БЭКЕНД - PUT] Ошибка при обработке нового изображения: {ex.Message}");
+                
                 return BadRequest("Ошибка при обработке нового изображения.");
             }
         }
-        else
-        {
-            Console.WriteLine("[БЭКЕНД - PUT] Новый файл изображения не был предоставлен. Сохраняем старое изображение.");
-            // Ничего не делаем с pump.ImageUrlPath, чтобы сохранить старое значение
-        }
+
 
         pump.PumpName = pumpWithImageDto.PumpName ?? pump.PumpName;
         pump.MaxPressure = pumpWithImageDto.MaxPressure ?? pump.MaxPressure;

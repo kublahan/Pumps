@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PumpApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2166565846a23adc6c3a61d9f9d9b4f75dc5272f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5585522fe42c041c238ea42404dd7d1817661707")]
 [assembly: System.Reflection.AssemblyProductAttribute("PumpApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PumpApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
