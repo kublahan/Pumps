@@ -1,1 +1,58 @@
-<p>motor-form works!</p>
+<div class="motor-form-page">
+  <h2>{{ isEditMode ? 'Редактировать мотор' : 'Добавить новый мотор' }}</h2>
+
+  <form [formGroup]="motorForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="name">Наименование:</label>
+      <input id="name" type="text" formControlName="name">
+      <div *ngIf="motorForm.get('name')?.invalid && motorForm.get('name')?.touched" class="error-message">
+        Наименование обязательно.
+      </div>
+    </div>
+
+    <div>
+      <label for="powerKw">Мощность (кВт):</label>
+      <input id="powerKw" type="number" formControlName="powerKw">
+      <div *ngIf="motorForm.get('powerKw')?.invalid && motorForm.get('powerKw')?.touched" class="error-message">
+        Мощность обязательна и должна быть числом.
+      </div>
+    </div>
+
+    <div>
+      <label for="currentA">Ток (А):</label>
+      <input id="currentA" type="number" formControlName="currentA">
+      <div *ngIf="motorForm.get('currentA')?.invalid && motorForm.get('currentA')?.touched" class="error-message">
+        Ток обязателен и должен быть числом.
+      </div>
+    </div>
+
+    <div>
+      <label for="speedRpm">Скорость вращения (об/мин):</label>
+      <input id="speedRpm" type="number" formControlName="speedRpm">
+      <div *ngIf="motorForm.get('speedRpm')?.invalid && motorForm.get('speedRpm')?.touched" class="error-message">
+        Скорость вращения обязательна и должна быть целым числом.
+      </div>
+    </div>
+
+    <div>
+      <label for="description">Описание:</label>
+      <textarea id="description" formControlName="description"></textarea>
+    </div>
+
+    <div>
+      <label for="priceRub">Цена (руб.):</label>
+      <input id="priceRub" type="number" formControlName="priceRub">
+      <div *ngIf="motorForm.get('priceRub')?.invalid && motorForm.get('priceRub')?.touched" class="error-message">
+        Цена обязательна и должна быть числом.
+      </div>
+    </div>
+
+    <div>
+      <label for="motorType">Тип мотора:</label>
+      <input id="motorType" type="text" formControlName="motorType">
+    </div>
+
+    <button type="submit" [disabled]="motorForm.invalid">{{ isEditMode ? 'Обновить' : 'Добавить' }}</button>
+    <button type="button" (click)="onCancel()">Отмена</button>
+  </form>
+</div>

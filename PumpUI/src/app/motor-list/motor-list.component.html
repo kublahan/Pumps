@@ -1,1 +1,41 @@
-<p>motor-list works!</p>
+<div class="motor-list-page">
+  <h2>Список Моторов</h2>
+  <div class="action-buttons">
+    <button routerLink="/pumps" class="back-button">Назад к списку насосов</button>
+    <button routerLink="/motors/new" class="add-button">Добавить новый мотор</button>
+  </div>
+
+  <div *ngIf="motors.length === 0; else motorTable" class="empty-message">
+    <p>Нет данных о моторах.</p>
+  </div>
+
+  <ng-template #motorTable>
+    <table>
+      <thead>
+        <tr>
+          <th>Наименование</th>
+          <th>Мощность (кВт)</th>
+          <th>Ток (А)</th>
+          <th>Скорость вращения (об/мин)</th>
+          <th>Описание</th>
+          <th>Цена (руб.)</th>
+          <th>Действия</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let motor of motors">
+          <td>{{ motor.name }}</td>
+          <td>{{ motor.powerKw }}</td>
+          <td>{{ motor.currentA }}</td>
+          <td>{{ motor.speedRpm }}</td>
+          <td style="max-width: 300px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">{{ motor.description }}</td>
+          <td>{{ motor.priceRub }}</td>
+          <td class="actions">
+            <a [routerLink]="['/motors/edit', motor.id]" class="edit-button">Редактировать</a>
+            <button (click)="deleteMotor(motor.id)" class="delete-button">Удалить</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </ng-template>
+</div>
