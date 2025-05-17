@@ -1,8 +1,9 @@
 <h2>Список Насосов</h2>
 <div>
   <button routerLink="/pumps/new" style="margin-right: 10px;">Добавить новый насос</button>
-  <button routerLink="/materials" style="margin-right: 10px;">Управление материалами</button> 
-  <button routerLink="/motors">Управление моторами</button> </div>
+  <button routerLink="/materials" style="margin-right: 10px;">Управление материалами</button>
+  <button routerLink="/motors">Управление моторами</button>
+</div>
 <table>
   <thead>
     <tr>
@@ -15,28 +16,29 @@
       <th>Вес</th>
       <th>Цена</th>
       <th>Описание</th>
-      <th>URL изображения</th>
-      <th>Действия</th>
+      <th>Изображение</th> <th>Действия</th>
     </tr>
   </thead>
   <tbody>
     <tr *ngFor="let pump of pumps">
       <td>{{ pump.pumpName }}</td>
       <td><a [routerLink]="['/motors', pump.motorDetails?.id]" style="cursor: pointer; color: blue; text-decoration: underline;">
-    {{ pump.motorDetails?.name }}
-  </a> </td>
+        {{ pump.motorDetails?.name }}
+      </a> </td>
       <td><a [routerLink]="['/materials', pump.housingMaterialDetails?.id]" style="cursor: pointer; color: blue; text-decoration: underline;">
-    {{ pump.housingMaterialDetails?.name }}
-  </a> </td>
+        {{ pump.housingMaterialDetails?.name }}
+      </a> </td>
       <td><a [routerLink]="['/materials', pump.wheelMaterialDetails?.id]" style="cursor: pointer; color: blue; text-decoration: underline;">
-    {{ pump.wheelMaterialDetails?.name }}
-  </a> </td>
+        {{ pump.wheelMaterialDetails?.name }}
+      </a> </td>
       <td>{{ pump.maxPressure }} бар</td>
       <td>{{ pump.liquidTemperatureCelsius }} °C</td>
       <td>{{ pump.weightInKilograms }} кг</td>
       <td>{{ pump.priceInRubles }} руб.</td>
       <td>{{ pump.pumpDescription }}</td>
-      <td>{{ pump.imageUrlPath }}</td>
+      <td>
+        <img *ngIf="pump.imageUrlPath" [src]="'data:image/jpeg;base64,' + pump.imageUrlPath" alt="{{ pump.pumpName }}" style="max-width: 100px; max-height: 100px;">
+        <span *ngIf="!pump.imageUrlPath">Нет изображения</span>
       <td>
         <a [routerLink]="['/pumps/edit', pump.id]">Редактировать</a>
         <button (click)="deletePump(pump.id)">Удалить</button>

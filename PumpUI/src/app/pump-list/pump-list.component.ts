@@ -1,7 +1,8 @@
+// src/app/pump-list/pump-list.component.ts
 import { Component, OnInit } from '@angular/core';
 import { Pump, PumpService } from '../services/pump.service';
 import { RouterModule } from '@angular/router';
-import { CommonModule } from '@angular/common';
+import { CommonModule } from '@angular/common'; // Import CommonModule
 
 @Component({
   selector: 'app-pump-list',
@@ -10,7 +11,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [
     RouterModule,
-    CommonModule
+    CommonModule // Add CommonModule to the imports array
   ],
 })
 export class PumpListComponent implements OnInit {
@@ -24,14 +25,25 @@ export class PumpListComponent implements OnInit {
 
   loadPumps(): void {
     this.pumpService.getPumps().subscribe(data => {
-      console.log('Полученные насосы:', data);
-      this.pumps = data;
+      this.pumps = data.map(pump => {
+
+        return pump;
+      });
     });
   }
 
+  arrayBufferToBase64(buffer: any): string {
+  if (buffer instanceof ArrayBuffer) {
+    const bytes = new Uint8Array(buffer);
+    return btoa(String.fromCharCode(...bytes));
+  }
+  return '';
+}
+
+
   deletePump(id: number): void {
-    if(confirm("Вы уверены, что хотите удалить этот насос?")) {
-        this.pumpService.deletePump(id).subscribe(() => {
+    if (confirm("Вы уверены, что хотите удалить этот насос?")) {
+      this.pumpService.deletePump(id).subscribe(() => {
         this.pumps = this.pumps.filter(p => p.id !== id);
       });
     }

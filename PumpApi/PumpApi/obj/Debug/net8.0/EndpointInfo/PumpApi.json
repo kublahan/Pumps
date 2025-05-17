@@ -418,19 +418,92 @@
         ],
         "requestBody": {
           "content": {
-            "application/json": {
+            "multipart/form-data": {
               "schema": {
-                "$ref": "#/components/schemas/PumpDto"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/PumpDto"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/PumpDto"
+                "required": [
+                  "HousingMaterialForeignKey",
+                  "MotorForeignKey",
+                  "PriceInRubles",
+                  "PumpName",
+                  "WheelMaterialForeignKey"
+                ],
+                "type": "object",
+                "properties": {
+                  "Id": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "PumpName": {
+                    "type": "string"
+                  },
+                  "MaxPressure": {
+                    "type": "number",
+                    "format": "double"
+                  },
+                  "LiquidTemperatureCelsius": {
+                    "type": "number",
+                    "format": "double"
+                  },
+                  "WeightInKilograms": {
+                    "type": "number",
+                    "format": "double"
+                  },
+                  "PumpDescription": {
+                    "type": "string"
+                  },
+                  "PriceInRubles": {
+                    "type": "number",
+                    "format": "double"
+                  },
+                  "MotorForeignKey": {
+                    "type": "string"
+                  },
+                  "HousingMaterialForeignKey": {
+                    "type": "string"
+                  },
+                  "WheelMaterialForeignKey": {
+                    "type": "string"
+                  },
+                  "ImageFile": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              },
+              "encoding": {
+                "Id": {
+                  "style": "form"
+                },
+                "PumpName": {
+                  "style": "form"
+                },
+                "MaxPressure": {
+                  "style": "form"
+                },
+                "LiquidTemperatureCelsius": {
+                  "style": "form"
+                },
+                "WeightInKilograms": {
+                  "style": "form"
+                },
+                "PumpDescription": {
+                  "style": "form"
+                },
+                "PriceInRubles": {
+                  "style": "form"
+                },
+                "MotorForeignKey": {
+                  "style": "form"
+                },
+                "HousingMaterialForeignKey": {
+                  "style": "form"
+                },
+                "WheelMaterialForeignKey": {
+                  "style": "form"
+                },
+                "ImageFile": {
+                  "style": "form"
+                }
               }
             }
           }
@@ -515,19 +588,92 @@
         ],
         "requestBody": {
           "content": {
-            "application/json": {
+            "multipart/form-data": {
               "schema": {
-                "$ref": "#/components/schemas/UpdatePumpDto"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/UpdatePumpDto"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/UpdatePumpDto"
+                "required": [
+                  "HousingMaterialForeignKey",
+                  "MotorForeignKey",
+                  "PriceInRubles",
+                  "PumpName",
+                  "WheelMaterialForeignKey"
+                ],
+                "type": "object",
+                "properties": {
+                  "Id": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "PumpName": {
+                    "type": "string"
+                  },
+                  "MaxPressure": {
+                    "type": "number",
+                    "format": "double"
+                  },
+                  "LiquidTemperatureCelsius": {
+                    "type": "number",
+                    "format": "double"
+                  },
+                  "WeightInKilograms": {
+                    "type": "number",
+                    "format": "double"
+                  },
+                  "PumpDescription": {
+                    "type": "string"
+                  },
+                  "PriceInRubles": {
+                    "type": "number",
+                    "format": "double"
+                  },
+                  "MotorForeignKey": {
+                    "type": "string"
+                  },
+                  "HousingMaterialForeignKey": {
+                    "type": "string"
+                  },
+                  "WheelMaterialForeignKey": {
+                    "type": "string"
+                  },
+                  "ImageFile": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              },
+              "encoding": {
+                "Id": {
+                  "style": "form"
+                },
+                "PumpName": {
+                  "style": "form"
+                },
+                "MaxPressure": {
+                  "style": "form"
+                },
+                "LiquidTemperatureCelsius": {
+                  "style": "form"
+                },
+                "WeightInKilograms": {
+                  "style": "form"
+                },
+                "PumpDescription": {
+                  "style": "form"
+                },
+                "PriceInRubles": {
+                  "style": "form"
+                },
+                "MotorForeignKey": {
+                  "style": "form"
+                },
+                "HousingMaterialForeignKey": {
+                  "style": "form"
+                },
+                "WheelMaterialForeignKey": {
+                  "style": "form"
+                },
+                "ImageFile": {
+                  "style": "form"
+                }
               }
             }
           }
@@ -651,6 +797,7 @@
           },
           "imageUrlPath": {
             "type": "string",
+            "format": "byte",
             "nullable": true
           },
           "priceInRubles": {
@@ -677,108 +824,6 @@
           },
           "wheelMaterialDetails": {
             "$ref": "#/components/schemas/Material"
-          }
-        },
-        "additionalProperties": false
-      },
-      "PumpDto": {
-        "type": "object",
-        "properties": {
-          "pumpName": {
-            "type": "string",
-            "nullable": true
-          },
-          "maxPressure": {
-            "type": "number",
-            "format": "double",
-            "nullable": true
-          },
-          "liquidTemperatureCelsius": {
-            "type": "number",
-            "format": "double",
-            "nullable": true
-          },
-          "weightInKilograms": {
-            "type": "number",
-            "format": "double",
-            "nullable": true
-          },
-          "pumpDescription": {
-            "type": "string",
-            "nullable": true
-          },
-          "imageUrlPath": {
-            "type": "string",
-            "nullable": true
-          },
-          "priceInRubles": {
-            "type": "number",
-            "format": "double"
-          },
-          "motorForeignKey": {
-            "type": "string",
-            "nullable": true
-          },
-          "housingMaterialForeignKey": {
-            "type": "string",
-            "nullable": true
-          },
-          "wheelMaterialForeignKey": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "UpdatePumpDto": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "pumpName": {
-            "type": "string",
-            "nullable": true
-          },
-          "maxPressure": {
-            "type": "number",
-            "format": "double",
-            "nullable": true
-          },
-          "liquidTemperatureCelsius": {
-            "type": "number",
-            "format": "double",
-            "nullable": true
-          },
-          "weightInKilograms": {
-            "type": "number",
-            "format": "double",
-            "nullable": true
-          },
-          "pumpDescription": {
-            "type": "string",
-            "nullable": true
-          },
-          "imageUrlPath": {
-            "type": "string",
-            "nullable": true
-          },
-          "priceInRubles": {
-            "type": "number",
-            "format": "double"
-          },
-          "motorForeignKey": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "housingMaterialForeignKey": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "wheelMaterialForeignKey": {
-            "type": "integer",
-            "format": "int32"
           }
         },
         "additionalProperties": false

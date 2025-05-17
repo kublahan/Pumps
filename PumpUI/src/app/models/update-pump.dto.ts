@@ -5,7 +5,7 @@ export interface UpdatePumpDto {
   LiquidTemperatureCelsius: number | null;
   WeightInKilograms: number | null;
   PumpDescription: string;
-  ImageUrlPath: string;
+  ImageUrlPath: string | null;
   PriceInRubles: number;
   MotorForeignKey: number;
   HousingMaterialForeignKey: number;

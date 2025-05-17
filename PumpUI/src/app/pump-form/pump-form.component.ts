@@ -6,8 +6,8 @@ import { MotorService, Motor } from '../services/motors.service';
 import { MaterialService, Material } from '../services/materials.service';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
-import { switchMap } from 'rxjs/operators';
-import { UpdatePumpDto } from '../models/update-pump.dto';
+import { switchMap, of } from 'rxjs';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-pump-form',
@@ -27,6 +27,7 @@ export class PumpFormComponent implements OnInit {
   wheelMaterials: Material[] = [];
   isEditMode: boolean = false;
   pumpId: number | null = null;
+  selectedFile: File | null = null;
 
   constructor(
     private fb: FormBuilder,
@@ -34,7 +35,7 @@ export class PumpFormComponent implements OnInit {
     private motorService: MotorService,
     private materialService: MaterialService,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
   ) {
     this.pumpForm = this.fb.group({
       PumpName: ['', Validators.required],
@@ -42,11 +43,12 @@ export class PumpFormComponent implements OnInit {
       LiquidTemperatureCelsius: [null],
       WeightInKilograms: [null],
       PumpDescription: [''],
-      ImageUrlPath: [''],
+      ImageUrlPath: [''], // Сюда будет URL изображения (если есть при редактировании)
       PriceInRubles: [null, Validators.required],
       MotorForeignKey: [null, Validators.required],
       HousingMaterialForeignKey: [null, Validators.required],
       WheelMaterialForeignKey: [null, Validators.required],
+      imageFile: [null] // Form control для выбора файла
     });
   }
 
@@ -60,7 +62,7 @@ export class PumpFormComponent implements OnInit {
           this.pumpId = +id;
           return this.pumpService.getPump(this.pumpId);
         }
-        return [];
+        return of(null);
       })
     ).subscribe(pump => {
       if (pump) {
@@ -92,63 +94,37 @@ export class PumpFormComponent implements OnInit {
     });
   }
 
-   onSubmit(): void {
-  if (this.pumpForm.valid) {
-    const pumpData = this.pumpForm.value;
-    const updatePumpDto: UpdatePumpDto = {
-      Id: this.pumpId!,
-      PumpName: pumpData.PumpName,
-      MaxPressure: pumpData.MaxPressure,
-      LiquidTemperatureCelsius: pumpData.LiquidTemperatureCelsius,
-      WeightInKilograms: pumpData.WeightInKilograms,
-      PumpDescription: pumpData.PumpDescription,
-      ImageUrlPath: pumpData.ImageUrlPath,
-      PriceInRubles: Number(pumpData.PriceInRubles),
-      MotorForeignKey: Number(pumpData.MotorForeignKey),
-      HousingMaterialForeignKey: Number(pumpData.HousingMaterialForeignKey),
-      WheelMaterialForeignKey: Number(pumpData.WheelMaterialForeignKey),
-    };
-
-    if (this.isEditMode && this.pumpId !== null) {
-      this.pumpService.updatePump(this.pumpId, updatePumpDto).subscribe({
-        next: (response) => {
-          console.log('Насос успешно обновлен', response);
-          this.router.navigate(['/pumps']);
-        },
-        error: (error) => {
-          console.error('Ошибка при обновлении насоса', error);
-        }
-      });
-    } else {
-
-    const pumpData = this.pumpForm.value;
-    const newPumpPayload = {
-        pumpName: pumpData.PumpName,
-        maxPressure: pumpData.MaxPressure === null || pumpData.MaxPressure === '' ? null : Number(pumpData.MaxPressure),
-        liquidTemperatureCelsius: pumpData.LiquidTemperatureCelsius === null || pumpData.LiquidTemperatureCelsius === '' ? null : Number(pumpData.LiquidTemperatureCelsius),
-        weightInKilograms: pumpData.WeightInKilograms === null || pumpData.WeightInKilograms === '' ? null : Number(pumpData.WeightInKilograms),
-        pumpDescription: pumpData.PumpDescription || null,
-        imageUrlPath: pumpData.ImageUrlPath || null,
-        priceInRubles: Number(pumpData.PriceInRubles),
-        motorForeignKey: String(pumpData.MotorForeignKey),
-        housingMaterialForeignKey: String(pumpData.HousingMaterialForeignKey),
-        wheelMaterialForeignKey: String(pumpData.WheelMaterialForeignKey),
-    };
-      this.pumpService.createPump(newPumpPayload as any).subscribe({
-        next: (response) => {
-            console.log('Насос успешно добавлен', response);
-            this.router.navigate(['/pumps']);
-        },
-        error: (error) => {
-            console.error('Ошибка при добавлении насоса', error);
-            console.log('Data sent for creation:', newPumpPayload);
-        }
-    });
-    }
-  } else {
-    console.log('Форма невалидна');
+  onFileChange(event: any): void {
+    this.selectedFile = event.target.files[0];
   }
-}
+
+  onSubmit(): void {
+    if (this.pumpForm.valid) {
+      const formData = new FormData();
+      for (const key in this.pumpForm.value) {
+        if (key === 'imageFile' && this.selectedFile) {
+          formData.append('ImageFile', this.selectedFile, this.selectedFile.name);
+        } else if (key !== 'imageFile') {
+          formData.append(key, this.pumpForm.get(key)?.value);
+        }
+      }
+
+      if (this.isEditMode && this.pumpId !== null) {
+        formData.append('Id', this.pumpId.toString());
+        this.pumpService.updatePump(this.pumpId, formData).subscribe({
+          next: () => this.router.navigate(['/pumps']),
+          error: (err: HttpErrorResponse) => console.error('Ошибка при обновлении насоса', err),
+        });
+      } else {
+        this.pumpService.createPump(formData).subscribe({
+          next: () => this.router.navigate(['/pumps']),
+          error: (err: HttpErrorResponse) => console.error('Ошибка при создании насоса', err),
+        });
+      }
+    } else {
+      console.log('Форма невалидна');
+    }
+  }
 
   onCancel(): void {
     this.router.navigate(['/pumps']);

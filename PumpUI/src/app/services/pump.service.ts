@@ -1,20 +1,19 @@
 // src/app/services/pump.service.ts
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable} from 'rxjs';
+import { Observable } from 'rxjs';
 import { Motor } from './motors.service';
 import { Material } from './materials.service';
-import { UpdatePumpDto } from '../models/update-pump.dto';
-import { PumpCreateDto } from '../models/create-pump.dto';
 
 export interface Pump {
   id: number;
   pumpName: string;
-  maxPressure: number;
-  liquidTemperatureCelsius: number;
-  weightInKilograms: number;
-  pumpDescription: string;
-  imageUrlPath: string;
+  maxPressure: number | null;
+  liquidTemperatureCelsius: number | null;
+  weightInKilograms: number | null;
+  pumpDescription: string | null;
+  imageUrlPath: string | null;
+  imageMimeType: string | null;
   priceInRubles: number;
   motorForeignKey: number;
   motorDetails: Motor;
@@ -28,7 +27,7 @@ export interface Pump {
   providedIn: 'root'
 })
 export class PumpService {
-  private apiUrl = 'http://localhost:5282/api/Pumps';
+  apiUrl = 'http://localhost:5282/api/Pumps';
 
   constructor(private http: HttpClient) { }
 
@@ -40,13 +39,13 @@ export class PumpService {
     return this.http.get<Pump>(`${this.apiUrl}/${id}`);
   }
 
-  createPump(pumpDto: PumpCreateDto): Observable<Pump> { 
-  return this.http.post<Pump>(this.apiUrl, pumpDto);
-}
+  createPump(formData: FormData): Observable<Pump> {
+    return this.http.post<Pump>(this.apiUrl, formData);
+  }
 
-  updatePump(id: number, pump: UpdatePumpDto): Observable<any> {
-  return this.http.put(`${this.apiUrl}/${id}`, pump);
-}
+  updatePump(id: number, formData: FormData): Observable<any> {
+    return this.http.put(`${this.apiUrl}/${id}`, formData);
+  }
 
   deletePump(id: number): Observable<any> {
     return this.http.delete(`${this.apiUrl}/${id}`);

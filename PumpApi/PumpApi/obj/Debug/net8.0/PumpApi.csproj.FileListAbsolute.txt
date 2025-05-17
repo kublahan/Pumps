@@ -47,3 +47,7 @@ D:\Programming\Projects\.NetProject\PumpApi\PumpApi\obj\Debug\net8.0\staticwebas
 D:\Programming\Projects\.NetProject\PumpApi\PumpApi\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 D:\Programming\Projects\.NetProject\PumpApi\PumpApi\obj\Debug\net8.0\PumpApi.csproj.Up2Date
 D:\Programming\Projects\.NetProject\PumpApi\PumpApi\obj\Debug\net8.0\PumpApi.sourcelink.json
+D:\Programming\Projects\.NetProject\PumpApi\PumpApi\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+D:\Programming\Projects\.NetProject\PumpApi\PumpApi\bin\Debug\net8.0\System.Drawing.Common.dll
+D:\Programming\Projects\.NetProject\PumpApi\PumpApi\bin\Debug\net8.0\System.Private.Windows.Core.dll
+D:\Programming\Projects\.NetProject\PumpApi\PumpApi\bin\Debug\net8.0\runtimes\win\lib\net8.0\Microsoft.Win32.SystemEvents.dll

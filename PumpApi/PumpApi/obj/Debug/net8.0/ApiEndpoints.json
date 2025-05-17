@@ -246,9 +246,59 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "pumpDto",
-        "Type": "PumpApi.Models.PumpDto",
-        "IsRequired": true
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PumpName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "MaxPressure",
+        "Type": "System.Nullable\u00601[[System.Double, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "LiquidTemperatureCelsius",
+        "Type": "System.Nullable\u00601[[System.Double, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "WeightInKilograms",
+        "Type": "System.Nullable\u00601[[System.Double, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "PumpDescription",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PriceInRubles",
+        "Type": "System.Decimal",
+        "IsRequired": false
+      },
+      {
+        "Name": "MotorForeignKey",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "HousingMaterialForeignKey",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "WheelMaterialForeignKey",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ImageFile",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": [
@@ -303,9 +353,59 @@
         "IsRequired": true
       },
       {
-        "Name": "pumpDto",
-        "Type": "PumpApi.Models.UpdatePumpDto",
-        "IsRequired": true
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PumpName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "MaxPressure",
+        "Type": "System.Nullable\u00601[[System.Double, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "LiquidTemperatureCelsius",
+        "Type": "System.Nullable\u00601[[System.Double, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "WeightInKilograms",
+        "Type": "System.Nullable\u00601[[System.Double, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "PumpDescription",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PriceInRubles",
+        "Type": "System.Decimal",
+        "IsRequired": false
+      },
+      {
+        "Name": "MotorForeignKey",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "HousingMaterialForeignKey",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "WheelMaterialForeignKey",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ImageFile",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
