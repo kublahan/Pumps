@@ -3,25 +3,25 @@
 
   <div *ngIf="motor; else loading" class="details-container">
     <div>
-      <strong>ID:</strong> {{ motor?.id }}
+      <strong>ID:</strong> {{ motor.id }}
     </div>
     <div>
-      <strong>Наименование:</strong> {{ motor?.name }}
+      <strong>Наименование:</strong> {{ motor.name }}
     </div>
     <div>
-      <strong>Мощность (кВт):</strong> {{ motor?.powerKw }}
+      <strong>Мощность (кВт):</strong> {{ motor.powerKw }}
     </div>
     <div>
-      <strong>Ток (А):</strong> {{ motor?.currentA }}
+      <strong>Ток (А):</strong> {{ motor.currentA }}
     </div>
     <div>
-      <strong>Скорость вращения (об/мин):</strong> {{ motor?.speedRpm }}
+      <strong>Скорость вращения (об/мин):</strong> {{ motor.speedRpm }}
     </div>
     <div>
-      <strong>Описание:</strong> {{ motor?.description }}
+      <strong>Описание:</strong> {{ motor.description }}
     </div>
     <div>
-      <strong>Цена (руб.):</strong> {{ motor?.priceRub }}
+      <strong>Цена (руб.):</strong> {{ motor.priceRub }}
     </div>
     <button routerLink="/pumps">Назад к списку насосов</button>
   </div>

@@ -2,13 +2,13 @@
 
 <div *ngIf="material; else loading">
   <div>
-    <strong>ID:</strong> {{ material?.id }}
+    <strong>ID:</strong> {{ material.id }}
   </div>
   <div>
-    <strong>Наименование:</strong> {{ material?.name }}
+    <strong>Наименование:</strong> {{ material.name }}
   </div>
   <div>
-    <strong>Описание:</strong> {{ material?.description }}
+    <strong>Описание:</strong> {{ material.description }}
   </div>
   <button routerLink="/pumps">Назад к списку насосов</button>
 </div>

@@ -1,4 +1,3 @@
-// src/app/motor-details/motor-details.component.ts
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { MotorService, Motor } from '../services/motors.service';

@@ -3,28 +3,20 @@
   "WorkspaceRootPath": "D:\\Programming\\Projects\\PumpsProj\\Pumps\\PumpApi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B5EC687B-033E-4772-A3A8-24F1916D9110}|PumpApi\\PumpApi.csproj|d:\\programming\\projects\\pumpsproj\\pumps\\pumpapi\\pumpapi\\controllers\\pumpscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B5EC687B-033E-4772-A3A8-24F1916D9110}|PumpApi\\PumpApi.csproj|solutionrelative:pumpapi\\controllers\\pumpscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B5EC687B-033E-4772-A3A8-24F1916D9110}|PumpApi\\PumpApi.csproj|d:\\programming\\projects\\pumpsproj\\pumps\\pumpapi\\pumpapi\\models\\pump.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B5EC687B-033E-4772-A3A8-24F1916D9110}|PumpApi\\PumpApi.csproj|solutionrelative:pumpapi\\models\\pump.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B5EC687B-033E-4772-A3A8-24F1916D9110}|PumpApi\\PumpApi.csproj|d:\\programming\\projects\\pumpsproj\\pumps\\pumpapi\\pumpapi\\models\\updatepumpdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5EC687B-033E-4772-A3A8-24F1916D9110}|PumpApi\\PumpApi.csproj|solutionrelative:pumpapi\\models\\updatepumpdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B5EC687B-033E-4772-A3A8-24F1916D9110}|PumpApi\\PumpApi.csproj|d:\\programming\\projects\\pumpsproj\\pumps\\pumpapi\\pumpapi\\models\\pumpwithimagedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B5EC687B-033E-4772-A3A8-24F1916D9110}|PumpApi\\PumpApi.csproj|solutionrelative:pumpapi\\models\\pumpwithimagedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B5EC687B-033E-4772-A3A8-24F1916D9110}|PumpApi\\PumpApi.csproj|d:\\programming\\projects\\pumpsproj\\pumps\\pumpapi\\pumpapi\\models\\updatepumpdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B5EC687B-033E-4772-A3A8-24F1916D9110}|PumpApi\\PumpApi.csproj|solutionrelative:pumpapi\\models\\updatepumpdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B5EC687B-033E-4772-A3A8-24F1916D9110}|PumpApi\\PumpApi.csproj|d:\\programming\\projects\\pumpsproj\\pumps\\pumpapi\\pumpapi\\models\\pumpdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B5EC687B-033E-4772-A3A8-24F1916D9110}|PumpApi\\PumpApi.csproj|solutionrelative:pumpapi\\models\\pumpdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B5EC687B-033E-4772-A3A8-24F1916D9110}|PumpApi\\PumpApi.csproj|d:\\programming\\projects\\pumpsproj\\pumps\\pumpapi\\pumpapi\\models\\motor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B5EC687B-033E-4772-A3A8-24F1916D9110}|PumpApi\\PumpApi.csproj|solutionrelative:pumpapi\\models\\motor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B5EC687B-033E-4772-A3A8-24F1916D9110}|PumpApi\\PumpApi.csproj|d:\\programming\\projects\\pumpsproj\\pumps\\pumpapi\\pumpapi\\models\\pump.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5EC687B-033E-4772-A3A8-24F1916D9110}|PumpApi\\PumpApi.csproj|solutionrelative:pumpapi\\models\\pump.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B5EC687B-033E-4772-A3A8-24F1916D9110}|PumpApi\\PumpApi.csproj|d:\\programming\\projects\\pumpsproj\\pumps\\pumpapi\\pumpapi\\models\\material.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -35,12 +27,16 @@
       "RelativeMoniker": "D:0:0:{B5EC687B-033E-4772-A3A8-24F1916D9110}|PumpApi\\PumpApi.csproj|solutionrelative:pumpapi\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{B5EC687B-033E-4772-A3A8-24F1916D9110}|PumpApi\\PumpApi.csproj|d:\\programming\\projects\\pumpsproj\\pumps\\pumpapi\\pumpapi\\controllers\\materialscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5EC687B-033E-4772-A3A8-24F1916D9110}|PumpApi\\PumpApi.csproj|solutionrelative:pumpapi\\controllers\\materialscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{B5EC687B-033E-4772-A3A8-24F1916D9110}|PumpApi\\PumpApi.csproj|d:\\programming\\projects\\pumpsproj\\pumps\\pumpapi\\pumpapi\\controllers\\motorscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B5EC687B-033E-4772-A3A8-24F1916D9110}|PumpApi\\PumpApi.csproj|solutionrelative:pumpapi\\controllers\\motorscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B5EC687B-033E-4772-A3A8-24F1916D9110}|PumpApi\\PumpApi.csproj|d:\\programming\\projects\\pumpsproj\\pumps\\pumpapi\\pumpapi\\controllers\\materialscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B5EC687B-033E-4772-A3A8-24F1916D9110}|PumpApi\\PumpApi.csproj|solutionrelative:pumpapi\\controllers\\materialscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B5EC687B-033E-4772-A3A8-24F1916D9110}|PumpApi\\PumpApi.csproj|d:\\programming\\projects\\pumpsproj\\pumps\\pumpapi\\pumpapi\\controllers\\pumpscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5EC687B-033E-4772-A3A8-24F1916D9110}|PumpApi\\PumpApi.csproj|solutionrelative:pumpapi\\controllers\\pumpscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B5EC687B-033E-4772-A3A8-24F1916D9110}|PumpApi\\PumpApi.csproj|d:\\programming\\projects\\pumpsproj\\pumps\\pumpapi\\pumpapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -49,6 +45,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{B5EC687B-033E-4772-A3A8-24F1916D9110}|PumpApi\\PumpApi.csproj|d:\\programming\\projects\\pumpsproj\\pumps\\pumpapi\\pumpapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B5EC687B-033E-4772-A3A8-24F1916D9110}|PumpApi\\PumpApi.csproj|solutionrelative:pumpapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5EC687B-033E-4772-A3A8-24F1916D9110}|PumpApi\\PumpApi.csproj|d:\\programming\\projects\\pumpsproj\\pumps\\pumpapi\\pumpapi\\models\\motor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5EC687B-033E-4772-A3A8-24F1916D9110}|PumpApi\\PumpApi.csproj|solutionrelative:pumpapi\\models\\motor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B5EC687B-033E-4772-A3A8-24F1916D9110}|PumpApi\\PumpApi.csproj|d:\\programming\\projects\\pumpsproj\\pumps\\pumpapi\\pumpapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -62,24 +62,115 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
+              "Title": "MaterialsController.cs",
+              "DocumentMoniker": "D:\\Programming\\Projects\\PumpsProj\\Pumps\\PumpApi\\PumpApi\\Controllers\\MaterialsController.cs",
+              "RelativeDocumentMoniker": "PumpApi\\Controllers\\MaterialsController.cs",
+              "ToolTip": "D:\\Programming\\Projects\\PumpsProj\\Pumps\\PumpApi\\PumpApi\\Controllers\\MaterialsController.cs",
+              "RelativeToolTip": "PumpApi\\Controllers\\MaterialsController.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAgwEoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T12:16:30.026Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MotorsController.cs",
+              "DocumentMoniker": "D:\\Programming\\Projects\\PumpsProj\\Pumps\\PumpApi\\PumpApi\\Controllers\\MotorsController.cs",
+              "RelativeDocumentMoniker": "PumpApi\\Controllers\\MotorsController.cs",
+              "ToolTip": "D:\\Programming\\Projects\\PumpsProj\\Pumps\\PumpApi\\PumpApi\\Controllers\\MotorsController.cs",
+              "RelativeToolTip": "PumpApi\\Controllers\\MotorsController.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAgwEoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T12:16:14.5Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "D:\\Programming\\Projects\\PumpsProj\\Pumps\\PumpApi\\PumpApi\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "PumpApi\\Data\\AppDbContext.cs",
+              "ToolTip": "D:\\Programming\\Projects\\PumpsProj\\Pumps\\PumpApi\\PumpApi\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "PumpApi\\Data\\AppDbContext.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAgwCoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T12:00:56.346Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Pump.cs",
+              "DocumentMoniker": "D:\\Programming\\Projects\\PumpsProj\\Pumps\\PumpApi\\PumpApi\\Models\\Pump.cs",
+              "RelativeDocumentMoniker": "PumpApi\\Models\\Pump.cs",
+              "ToolTip": "D:\\Programming\\Projects\\PumpsProj\\Pumps\\PumpApi\\PumpApi\\Models\\Pump.cs",
+              "RelativeToolTip": "PumpApi\\Models\\Pump.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAywDYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T11:48:13.797Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PumpWithImageDto.cs",
+              "DocumentMoniker": "D:\\Programming\\Projects\\PumpsProj\\Pumps\\PumpApi\\PumpApi\\Models\\PumpWithImageDto.cs",
+              "RelativeDocumentMoniker": "PumpApi\\Models\\PumpWithImageDto.cs",
+              "ToolTip": "D:\\Programming\\Projects\\PumpsProj\\Pumps\\PumpApi\\PumpApi\\Models\\PumpWithImageDto.cs",
+              "RelativeToolTip": "PumpApi\\Models\\PumpWithImageDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAYwBkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T10:41:01.24Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Programming\\Projects\\PumpsProj\\Pumps\\PumpApi\\PumpApi\\appsettings.json",
+              "RelativeDocumentMoniker": "PumpApi\\appsettings.json",
+              "ToolTip": "D:\\Programming\\Projects\\PumpsProj\\Pumps\\PumpApi\\PumpApi\\appsettings.json",
+              "RelativeToolTip": "PumpApi\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-15T11:48:50.072Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "PumpsController.cs",
               "DocumentMoniker": "D:\\Programming\\Projects\\PumpsProj\\Pumps\\PumpApi\\PumpApi\\Controllers\\PumpsController.cs",
               "RelativeDocumentMoniker": "PumpApi\\Controllers\\PumpsController.cs",
               "ToolTip": "D:\\Programming\\Projects\\PumpsProj\\Pumps\\PumpApi\\PumpApi\\Controllers\\PumpsController.cs",
               "RelativeToolTip": "PumpApi\\Controllers\\PumpsController.cs",
-              "ViewState": "AgIAAIgAAAAAAAAAAAAQwDoAAABVAAAAAAAAAA==",
+              "ViewState": "AgIAAL4AAAAAAAAAAAAwwOAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-15T12:15:58.816Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 10,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Programming\\Projects\\PumpsProj\\Pumps\\PumpApi\\PumpApi\\Program.cs",
+              "RelativeDocumentMoniker": "PumpApi\\Program.cs",
+              "ToolTip": "D:\\Programming\\Projects\\PumpsProj\\Pumps\\PumpApi\\PumpApi\\Program.cs",
+              "RelativeToolTip": "PumpApi\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T11:54:11.744Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "PumpDto.cs",
               "DocumentMoniker": "D:\\Programming\\Projects\\PumpsProj\\Pumps\\PumpApi\\PumpApi\\Models\\PumpDto.cs",
               "RelativeDocumentMoniker": "PumpApi\\Models\\PumpDto.cs",
@@ -87,23 +178,25 @@
               "RelativeToolTip": "PumpApi\\Models\\PumpDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T18:16:22.599Z"
+              "WhenOpened": "2025-05-16T18:16:22.599Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Motor.cs",
-              "DocumentMoniker": "D:\\Programming\\Projects\\PumpsProj\\Pumps\\PumpApi\\PumpApi\\Models\\Motor.cs",
-              "RelativeDocumentMoniker": "PumpApi\\Models\\Motor.cs",
-              "ToolTip": "D:\\Programming\\Projects\\PumpsProj\\Pumps\\PumpApi\\PumpApi\\Models\\Motor.cs",
-              "RelativeToolTip": "PumpApi\\Models\\Motor.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAkwCIAAAABAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "UpdatePumpDto.cs",
+              "DocumentMoniker": "D:\\Programming\\Projects\\PumpsProj\\Pumps\\PumpApi\\PumpApi\\Models\\UpdatePumpDto.cs",
+              "RelativeDocumentMoniker": "PumpApi\\Models\\UpdatePumpDto.cs",
+              "ToolTip": "D:\\Programming\\Projects\\PumpsProj\\Pumps\\PumpApi\\PumpApi\\Models\\UpdatePumpDto.cs",
+              "RelativeToolTip": "PumpApi\\Models\\UpdatePumpDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-15T11:58:48.887Z"
+              "WhenOpened": "2025-05-16T19:03:08.333Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 4,
               "Title": "Material.cs",
               "DocumentMoniker": "D:\\Programming\\Projects\\PumpsProj\\Pumps\\PumpApi\\PumpApi\\Models\\Material.cs",
               "RelativeDocumentMoniker": "PumpApi\\Models\\Material.cs",
@@ -111,19 +204,8 @@
               "RelativeToolTip": "PumpApi\\Models\\Material.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-15T11:59:22.842Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "MaterialsController.cs",
-              "DocumentMoniker": "D:\\Programming\\Projects\\PumpsProj\\Pumps\\PumpApi\\PumpApi\\Controllers\\MaterialsController.cs",
-              "RelativeDocumentMoniker": "PumpApi\\Controllers\\MaterialsController.cs",
-              "ToolTip": "D:\\Programming\\Projects\\PumpsProj\\Pumps\\PumpApi\\PumpApi\\Controllers\\MaterialsController.cs",
-              "RelativeToolTip": "PumpApi\\Controllers\\MaterialsController.cs",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAmwDAAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-15T12:16:30.026Z"
+              "WhenOpened": "2025-05-15T11:59:22.842Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -139,87 +221,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "MotorsController.cs",
-              "DocumentMoniker": "D:\\Programming\\Projects\\PumpsProj\\Pumps\\PumpApi\\PumpApi\\Controllers\\MotorsController.cs",
-              "RelativeDocumentMoniker": "PumpApi\\Controllers\\MotorsController.cs",
-              "ToolTip": "D:\\Programming\\Projects\\PumpsProj\\Pumps\\PumpApi\\PumpApi\\Controllers\\MotorsController.cs",
-              "RelativeToolTip": "PumpApi\\Controllers\\MotorsController.cs",
-              "ViewState": "AgIAAD0AAAAAAAAAAAAcwBUAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-15T12:16:14.5Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "D:\\Programming\\Projects\\PumpsProj\\Pumps\\PumpApi\\PumpApi\\Data\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "PumpApi\\Data\\AppDbContext.cs",
-              "ToolTip": "D:\\Programming\\Projects\\PumpsProj\\Pumps\\PumpApi\\PumpApi\\Data\\AppDbContext.cs",
-              "RelativeToolTip": "PumpApi\\Data\\AppDbContext.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAcwBkAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-15T12:00:56.346Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Pump.cs",
-              "DocumentMoniker": "D:\\Programming\\Projects\\PumpsProj\\Pumps\\PumpApi\\PumpApi\\Models\\Pump.cs",
-              "RelativeDocumentMoniker": "PumpApi\\Models\\Pump.cs",
-              "ToolTip": "D:\\Programming\\Projects\\PumpsProj\\Pumps\\PumpApi\\PumpApi\\Models\\Pump.cs",
-              "RelativeToolTip": "PumpApi\\Models\\Pump.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAA9wBkAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-15T11:48:13.797Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "PumpWithImageDto.cs",
-              "DocumentMoniker": "D:\\Programming\\Projects\\PumpsProj\\Pumps\\PumpApi\\PumpApi\\Models\\PumpWithImageDto.cs",
-              "RelativeDocumentMoniker": "PumpApi\\Models\\PumpWithImageDto.cs",
-              "ToolTip": "D:\\Programming\\Projects\\PumpsProj\\Pumps\\PumpApi\\PumpApi\\Models\\PumpWithImageDto.cs",
-              "RelativeToolTip": "PumpApi\\Models\\PumpWithImageDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-17T10:41:01.24Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UpdatePumpDto.cs",
-              "DocumentMoniker": "D:\\Programming\\Projects\\PumpsProj\\Pumps\\PumpApi\\PumpApi\\Models\\UpdatePumpDto.cs",
-              "RelativeDocumentMoniker": "PumpApi\\Models\\UpdatePumpDto.cs",
-              "ToolTip": "D:\\Programming\\Projects\\PumpsProj\\Pumps\\PumpApi\\PumpApi\\Models\\UpdatePumpDto.cs",
-              "RelativeToolTip": "PumpApi\\Models\\UpdatePumpDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T19:03:08.333Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\Programming\\Projects\\PumpsProj\\Pumps\\PumpApi\\PumpApi\\appsettings.json",
-              "RelativeDocumentMoniker": "PumpApi\\appsettings.json",
-              "ToolTip": "D:\\Programming\\Projects\\PumpsProj\\Pumps\\PumpApi\\PumpApi\\appsettings.json",
-              "RelativeToolTip": "PumpApi\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-05-15T11:48:50.072Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 11,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Programming\\Projects\\PumpsProj\\Pumps\\PumpApi\\PumpApi\\Program.cs",
-              "RelativeDocumentMoniker": "PumpApi\\Program.cs",
-              "ToolTip": "D:\\Programming\\Projects\\PumpsProj\\Pumps\\PumpApi\\PumpApi\\Program.cs",
-              "RelativeToolTip": "PumpApi\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAhAAAAAAAAAA==",
+              "Title": "Motor.cs",
+              "DocumentMoniker": "D:\\Programming\\Projects\\PumpsProj\\Pumps\\PumpApi\\PumpApi\\Models\\Motor.cs",
+              "RelativeDocumentMoniker": "PumpApi\\Models\\Motor.cs",
+              "ToolTip": "D:\\Programming\\Projects\\PumpsProj\\Pumps\\PumpApi\\PumpApi\\Models\\Motor.cs",
+              "RelativeToolTip": "PumpApi\\Models\\Motor.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAkwCIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-15T11:54:11.744Z"
+              "WhenOpened": "2025-05-15T11:58:48.887Z"
             }
           ]
         }

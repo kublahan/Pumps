@@ -22,14 +22,14 @@
   <tbody>
     <tr *ngFor="let pump of pumps">
       <td>{{ pump.pumpName }}</td>
-      <td><a [routerLink]="['/motors', pump.motorDetails?.id]" style="cursor: pointer; color: blue; text-decoration: underline;">
-        {{ pump.motorDetails?.name }}
+      <td><a [routerLink]="['/motors', pump.motorDetails.id]" style="cursor: pointer; color: blue; text-decoration: underline;">
+        {{ pump.motorDetails.name }}
       </a> </td>
-      <td><a [routerLink]="['/materials', pump.housingMaterialDetails?.id]" style="cursor: pointer; color: blue; text-decoration: underline;">
-        {{ pump.housingMaterialDetails?.name }}
+      <td><a [routerLink]="['/materials', pump.housingMaterialDetails.id]" style="cursor: pointer; color: blue; text-decoration: underline;">
+        {{ pump.housingMaterialDetails.name }}
       </a> </td>
-      <td><a [routerLink]="['/materials', pump.wheelMaterialDetails?.id]" style="cursor: pointer; color: blue; text-decoration: underline;">
-        {{ pump.wheelMaterialDetails?.name }}
+      <td><a [routerLink]="['/materials', pump.wheelMaterialDetails.id]" style="cursor: pointer; color: blue; text-decoration: underline;">
+        {{ pump.wheelMaterialDetails.name }}
       </a> </td>
       <td>{{ pump.maxPressure }} бар</td>
       <td>{{ pump.liquidTemperatureCelsius }} °C</td>

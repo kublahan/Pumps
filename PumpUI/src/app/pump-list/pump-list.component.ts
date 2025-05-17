@@ -1,8 +1,7 @@
-// src/app/pump-list/pump-list.component.ts
 import { Component, OnInit } from '@angular/core';
 import { Pump, PumpService } from '../services/pump.service';
 import { RouterModule } from '@angular/router';
-import { CommonModule } from '@angular/common'; // Import CommonModule
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-pump-list',
@@ -11,7 +10,7 @@ import { CommonModule } from '@angular/common'; // Import CommonModule
   standalone: true,
   imports: [
     RouterModule,
-    CommonModule // Add CommonModule to the imports array
+    CommonModule
   ],
 })
 export class PumpListComponent implements OnInit {

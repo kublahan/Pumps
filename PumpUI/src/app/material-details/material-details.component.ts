@@ -1,4 +1,3 @@
-// src/app/material-details/material-details.component.ts
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { MaterialService, Material } from '../services/materials.service';

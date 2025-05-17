@@ -1,4 +1,3 @@
-// src/app/services/materials.service.ts
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
@@ -13,7 +12,7 @@ export interface Material {
   providedIn: 'root'
 })
 export class MaterialService {
-  private apiUrl = 'http://localhost:5282/api/Materials'; // Пример URL
+  private apiUrl = 'http://localhost:5282/api/Materials';
 
   constructor(private http: HttpClient) { }
 
