@@ -27,7 +27,7 @@ namespace PumpApi.Models
         public string PumpDescription { get; set; }
 
         [Column("image_url")]
-        public byte[] ImageUrlPath { get; set; }
+        public byte[]? ImageUrlPath { get; set; }
 
         [Column("price_rub")]
         public decimal PriceInRubles { get; set; }

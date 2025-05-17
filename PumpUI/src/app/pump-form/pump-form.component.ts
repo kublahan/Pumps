@@ -43,12 +43,12 @@ export class PumpFormComponent implements OnInit {
       LiquidTemperatureCelsius: [null],
       WeightInKilograms: [null],
       PumpDescription: [''],
-      ImageUrlPath: [''], // Сюда будет URL изображения (если есть при редактировании)
+      ImageUrlPath: [''],
       PriceInRubles: [null, Validators.required],
       MotorForeignKey: [null, Validators.required],
       HousingMaterialForeignKey: [null, Validators.required],
       WheelMaterialForeignKey: [null, Validators.required],
-      imageFile: [null] // Form control для выбора файла
+      imageFile: [null]
     });
   }
 
@@ -101,13 +101,13 @@ export class PumpFormComponent implements OnInit {
   onSubmit(): void {
     if (this.pumpForm.valid) {
       const formData = new FormData();
-      for (const key in this.pumpForm.value) {
-        if (key === 'imageFile' && this.selectedFile) {
-          formData.append('ImageFile', this.selectedFile, this.selectedFile.name);
-        } else if (key !== 'imageFile') {
-          formData.append(key, this.pumpForm.get(key)?.value);
-        }
+       for (const key in this.pumpForm.value) {
+      if (key === 'imageFile' && this.selectedFile) {
+        formData.append('ImageFile', this.selectedFile, this.selectedFile.name);
+      } else if (key !== 'imageFile') {
+        formData.append(key, this.pumpForm.get(key)?.value);
       }
+    }
 
       if (this.isEditMode && this.pumpId !== null) {
         formData.append('Id', this.pumpId.toString());

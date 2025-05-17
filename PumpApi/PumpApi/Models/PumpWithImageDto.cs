@@ -21,6 +21,6 @@ namespace PumpApi.Models
         [Required]
         public string WheelMaterialForeignKey { get; set; }
 
-        public IFormFile ImageFile { get; set; }
+        public IFormFile? ImageFile { get; set; }
     }
 }

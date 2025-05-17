@@ -52,6 +52,10 @@ public class PumpsController : ControllerBase
     [HttpPost]
     public async Task<ActionResult<Pump>> PostPump([FromForm] PumpWithImageDto pumpWithImageDto)
     {
+        if (!ModelState.IsValid)
+        {
+            return BadRequest(ModelState);
+        }
         if (!int.TryParse(pumpWithImageDto.MotorForeignKey, out int motorForeignKey))
         {
             return BadRequest("Invalid MotorForeignKey");
@@ -147,10 +151,10 @@ public class PumpsController : ControllerBase
             return BadRequest("Invalid WheelMaterialForeignKey");
         }
 
-        byte[] imageData = pump.ImageUrlPath;
-
+        // Проверяем, был ли предоставлен новый файл изображения
         if (pumpWithImageDto.ImageFile != null && pumpWithImageDto.ImageFile.Length > 0)
         {
+            byte[] imageData = null;
             try
             {
                 using (var memoryStream = new MemoryStream())
@@ -162,24 +166,29 @@ public class PumpsController : ControllerBase
                         {
                             image.Save(jpegMemoryStream, ImageFormat.Jpeg);
                             imageData = jpegMemoryStream.ToArray();
-                            
+                            Console.WriteLine($"[БЭКЕНД - PUT] Новое изображение преобразовано в JPEG, размер: {imageData?.Length} байт");
+                            pump.ImageUrlPath = imageData; // Обновляем бинарные данные новым изображением
                         }
                     }
                 }
             }
             catch (Exception ex)
             {
-                
-                return BadRequest("Ошибка при обработке изображения.");
+                Console.WriteLine($"[БЭКЕНД - PUT] Ошибка при обработке нового изображения: {ex.Message}");
+                return BadRequest("Ошибка при обработке нового изображения.");
             }
+        }
+        else
+        {
+            Console.WriteLine("[БЭКЕНД - PUT] Новый файл изображения не был предоставлен. Сохраняем старое изображение.");
+            // Ничего не делаем с pump.ImageUrlPath, чтобы сохранить старое значение
         }
 
         pump.PumpName = pumpWithImageDto.PumpName ?? pump.PumpName;
         pump.MaxPressure = pumpWithImageDto.MaxPressure ?? pump.MaxPressure;
         pump.LiquidTemperatureCelsius = pumpWithImageDto.LiquidTemperatureCelsius ?? pump.LiquidTemperatureCelsius;
         pump.WeightInKilograms = pumpWithImageDto.WeightInKilograms ?? pump.WeightInKilograms;
-        pump.PumpDescription = pumpWithImageDto.PumpDescription ?? pump.PumpDescription;
-        pump.ImageUrlPath = imageData;
+        pump.PumpDescription = pumpWithImageDto.PumpDescription ?? pumpWithImageDto.PumpDescription;
         pump.PriceInRubles = pumpWithImageDto.PriceInRubles;
         pump.MotorForeignKey = motorId;
         pump.HousingMaterialForeignKey = housingMaterialId;
