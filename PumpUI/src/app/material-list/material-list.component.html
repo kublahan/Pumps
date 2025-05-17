@@ -1,0 +1,33 @@
+<div class="material-list-page">
+  <h2>Список Материалов</h2>
+  <div class="action-buttons">
+    <button routerLink="/pumps" class="back-button">Назад к списку насосов</button>
+    <button routerLink="/materials/new" class="add-button">Добавить новый материал</button>
+  </div>
+
+  <div *ngIf="materials.length === 0; else materialTable" class="empty-message">
+    <p>Нет данных о материалах.</p>
+  </div>
+
+  <ng-template #materialTable>
+    <table>
+      <thead>
+        <tr>
+          <th>Наименование</th>
+          <th>Описание</th>
+          <th>Действия</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let material of materials">
+          <td>{{ material.name }}</td>
+          <td>{{ material.description }}</td>
+        <td class="actions">
+            <a [routerLink]="['/materials/edit', material.id]" class="edit-button">Редактировать</a>
+            <button (click)="deleteMaterial(material.id)" class="delete-button">Удалить</button>
+        </td>
+        </tr>
+      </tbody>
+    </table>
+  </ng-template>
+</div>

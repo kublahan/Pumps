@@ -1,0 +1,21 @@
+<div class="material-form-page">
+  <h2>{{ isEditMode ? 'Редактировать материал' : 'Добавить новый материал' }}</h2>
+
+  <form [formGroup]="materialForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="name">Наименование:</label>
+      <input id="name" formControlName="name">
+      <div *ngIf="materialForm.get('name')?.invalid && materialForm.get('name')?.touched" class="error-message">
+        Наименование обязательно.
+      </div>
+    </div>
+
+    <div>
+      <label for="description">Описание:</label>
+      <textarea id="description" formControlName="description"></textarea>
+    </div>
+
+    <button type="submit" [disabled]="materialForm.invalid">{{ isEditMode ? 'Обновить' : 'Добавить' }}</button>
+    <button type="button" (click)="onCancel()">Отмена</button>
+  </form>
+</div>

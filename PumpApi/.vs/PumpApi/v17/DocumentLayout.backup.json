@@ -68,7 +68,7 @@
               "RelativeDocumentMoniker": "PumpApi\\Models\\PumpDto.cs",
               "ToolTip": "D:\\Programming\\Projects\\.NetProject\\PumpApi\\PumpApi\\Models\\PumpDto.cs",
               "RelativeToolTip": "PumpApi\\Models\\PumpDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAzAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-16T18:16:22.599Z",
               "EditorCaption": ""
@@ -83,8 +83,7 @@
               "RelativeToolTip": "PumpApi\\Models\\Pump.cs",
               "ViewState": "AgIAABoAAAAAAAAAAAAywDYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-15T11:48:13.797Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-15T11:48:13.797Z"
             },
             {
               "$type": "Document",
@@ -96,8 +95,7 @@
               "RelativeToolTip": "PumpApi\\Data\\AppDbContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-15T12:00:56.346Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-15T12:00:56.346Z"
             },
             {
               "$type": "Document",
@@ -107,10 +105,9 @@
               "RelativeDocumentMoniker": "PumpApi\\Controllers\\PumpsController.cs",
               "ToolTip": "D:\\Programming\\Projects\\.NetProject\\PumpApi\\PumpApi\\Controllers\\PumpsController.cs",
               "RelativeToolTip": "PumpApi\\Controllers\\PumpsController.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAYwDEAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAAHIAAAAAAAAAAAAqwJcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-15T12:15:58.816Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-15T12:15:58.816Z"
             },
             {
               "$type": "Document",
@@ -120,10 +117,9 @@
               "RelativeDocumentMoniker": "PumpApi\\Models\\UpdatePumpDto.cs",
               "ToolTip": "D:\\Programming\\Projects\\.NetProject\\PumpApi\\PumpApi\\Models\\UpdatePumpDto.cs",
               "RelativeToolTip": "PumpApi\\Models\\UpdatePumpDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA6AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T19:03:08.333Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-16T19:03:08.333Z"
             },
             {
               "$type": "Document",

@@ -83,8 +83,7 @@
               "RelativeToolTip": "PumpApi\\Models\\Pump.cs",
               "ViewState": "AgIAABoAAAAAAAAAAAAywDYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-15T11:48:13.797Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-15T11:48:13.797Z"
             },
             {
               "$type": "Document",
@@ -96,8 +95,7 @@
               "RelativeToolTip": "PumpApi\\Data\\AppDbContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-15T12:00:56.346Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-15T12:00:56.346Z"
             },
             {
               "$type": "Document",
@@ -109,8 +107,7 @@
               "RelativeToolTip": "PumpApi\\Controllers\\PumpsController.cs",
               "ViewState": "AgIAAHIAAAAAAAAAAAAqwJcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-15T12:15:58.816Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-15T12:15:58.816Z"
             },
             {
               "$type": "Document",
@@ -122,8 +119,7 @@
               "RelativeToolTip": "PumpApi\\Models\\UpdatePumpDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T19:03:08.333Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-16T19:03:08.333Z"
             },
             {
               "$type": "Document",
